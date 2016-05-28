@@ -26,7 +26,6 @@ body{
 #top-bar-content{
   min-height: 30px;
   display: block;
-  width: 100%;
   max-width: 1280px;
   font-size: 12px;
   font-weight: 400;
@@ -59,14 +58,52 @@ body{
 #header{
   min-height: 130px;
   background: #2c5e91 url("../img/header-bg.jpg") repeat-x top;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+#header-content{
+  color: #fff;
+  text-decoration: none;
+}
+
+#header-content-text{
+  display: inline;
+}
+
+#ucla-logo{
+  height: 67px;
+  text-indent: -9999px;
+  width: 154px;
+}
+
+.nav-bar-container{
+  width: 100%;
+  margin: 0px;
+}
+
+#nav-bar{
+  float:right;
+}
+
+#nav-bar a{
+  color: white
+}
+
+#nav-bar a:hover{
+  text-decoration: none;
+  color: yellow;
+}
 /*=================
       CONTENT
 =================*/
+#content-wrapper{
+  margin: 0 auto;
+}
 
 #content{
   margin: -20px 0 45px;
+  padding: 50px 30px;
   background-color: white; /*REMOVE THIS LATER*/
   min-height: 2000px; /*REMOVE THIS LATER*/
 }
