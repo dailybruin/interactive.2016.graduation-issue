@@ -1,21 +1,38 @@
 html {
-
 	background-image: url(https://shb.ais.ucla.edu/shibboleth-idp/images/skyline.jpg);
 	background-size: cover;
-	background-color: rgb(51, 153, 204);
+	box-sizing: border-box;
 	position: relative;
 	min-height: 100%;
 	width: 100%;
+	display: block;
+}
 
-	font-family: sans-serif;
+body {
+	font-family: "Proxima Nova", sans-serif;
+	font-size: 100%;
+	letter-spacing: 0.5px;
+}
+
+.logo img {
+	display: block;
+	width: 26em;
+	margin: 0.5em auto 0;
+}
+
+section[role="main"] {
+	margin-bottom: 8em;
+	display: block;
 }
 
 #login {
-	background-color: #fff;
+	background: #fff;
 	box-shadow: 0 1px 1px #347bad;
 	border-radius: 3px;
-	padding: 2.5% 7.5%;
-	width: auto;
+	padding: 2em 4em;
+	position: fixed;
+	overflow: hidden;
+	margin: 1em 0 0; /*need to figure out margins*/
 }
 
 legend {
@@ -30,6 +47,7 @@ legend {
 }
 
 input, select {
+	display: inline-block;
 	color: #ccc;
 	border: 1px solid;
 	border-radius: 3px;
@@ -53,8 +71,37 @@ input, select {
 button {
 	text-align: center;
 	cursor: pointer;
-	padding: 1.5% 1.80%;
+	padding: 2.5% 2.90%;
 	border: none;
 	text-decoration: none;
 	border-radius: 3px;
+}
+
+/*animated typing*/
+
+input[type="text"]
+{
+    width: 30em;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+
+input[type="password"]
+{
+    width: 30em;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
 }
