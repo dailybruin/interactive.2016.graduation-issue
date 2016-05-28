@@ -2,19 +2,23 @@
 <html>
 <head>
 	<title>OurUCLA</title>
-	 <link href="css/login.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
 </head>
 <body>
 	<header class="logo" role="banner">
 		<img src="https://shb.ais.ucla.edu/shibboleth-idp/images/ucla-white.png" alt="UCLA">
 	</header>
-	<section class="content" role ="main">
-		<form id="login" role="form">
-    		<legend>Sign In with your UCLA Logon ID</legend>
-    		<p><input type="text" placeholder="Your UCLA Logon ID"></p>
-    		<p><input type="password" placeholder="Your UCLA Logon Password"></p>
-    		<button class="logon-button" type="submit">Sign In</button>
-    	</form>
-    </section>
+	<div class="form">
+		<section class="content" role="main">
+			<form id="login" role="form">
+				<legend>Sign In with your UCLA Logon ID</legend>
+				<p class="animated-username"><input type="text" placeholder="Your UCLA Logon ID"></p>
+				<p class="animated-password"><input type="password" placeholder="Your UCLA Logon Password"></p>
+				<button class="logon-button" type="submit">Sign In</button>
+			</form>
+		</section>
+	</div>
 </body>
 </html>
+
+
