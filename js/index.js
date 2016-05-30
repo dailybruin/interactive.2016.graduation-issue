@@ -1,94 +1,72 @@
-$(document).ready(function() {
-	/*isotope*/
-	$(".element-item").on('mouseover', function() {
-		this.style.cursor = "pointer";
-		$('.element-overlay').css('opacity', 1);
-	})
-	$(".element-item").on('mouseout', function() {
-		this.style.cursor = "pointer";
-		$('.element-overlay').css('opacity', 0);
-	})
+var type1 = function(callbackFunction){
+  $('.login-button').on("click",function(e){
+    e.preventDefault;
+  });
 
-	/* for the -30- column, using handlebars */
-	var modal = {
-		init: function() {
+  $("#username").css("border-color", "green");
 
-			// Setup the template
-			this.source = $("#modal-template").html();
+  $("#username").typed({
+    strings: ["Joe Bruin", "Josephine Bruin"],
+    typeSpeed: 14,
+    callback: function(){
+      callbackFunction();
+    },
+    showCursor: true,
+    // character for cursor
+    cursorChar: "|"
+  });
+}
+var type2 = function(){
+  $("#password").css("border-color", "green");
+  $("#password").typed({
+    strings: ["^400Congratulations Class of 2016!"],
+    typeSpeed: 14,
+    showCursor: true,
+    // character for cursor
+    cursorChar: "|",
+    callback: function(){
+      $(".logon-button").css("background-color", "yellow");
+      window.location.replace("main.html");
+    },
+  });
+}
 
-			// Setup outercontainer
-			this.outercontainer = $('#content');
+function GetSetCookie() {
+  var version = getCookie("version");
+  if (version != null && version != "") {
+    if (version == 'full') {
+      version = 'text';
+    }
+    else {
+      version = 'full';
+    }
+    // window.location.replace("main.html");
+  }
+  else {
+    version = 'full';
+    window.location.replace("main.html");
+  }
+  setCookie("version", version, 1);
+  type1(type2);
+}
+function setCookie(c_name, value, exdays) {
+  var exdate = new Date();
+  exdate.setDate(exdate.getDate() + exdays);
+  var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+  document.cookie = c_name + "=" + c_value + "; path=/";
+}
+function getCookie(c_name) {
+  var i, x, y, ARRcookies = document.cookie.split(";");
+  for (i = 0; i < ARRcookies.length; i++) {
+    x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+    y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+    x = x.replace(/^\s+|\s+$/g, "");
+    if (x == c_name) {
+      return unescape(y);
+    }
+  }
+}
 
-			// Get the stuff
-			this.clickToOpenModal();
-
-			// Close the stuff
-			this.closeModal();
-
-		},
-		clickToOpenModal: function(context, thisLink) {
-
-			$('a[data-behaviour="modal"]').on('click', function(e) {
-				var thisLink = $(this);
-
-				var context = {
-					title: thisLink.data('title'),
-					content: thisLink.data('content')
-				};
-
-				e.preventDefault();
-
-			 // Do nothing if open
-			 if ( modal.outercontainer.children('div#modal').length ) return;
-
-				 // Attach the content to the the modal
-				modal.attachTemplate(context, thisLink);
-
-				// Trigger the open event
-				thisLink.trigger('open');
-			});
-
-		},
-		attachTemplate: function(context, thisLink) {
-			 var source = Handlebars.compile(this.source);
-
-				this.outercontainer
-					.append(source(context))
-					.promise()
-					.done(function() {
-
-					this
-						.children('div#modal')
-						.addClass('modal-visible');
-
-					 // Close the stuff
-					 thisLink.one('open', function() {
-						 modal.closeModal();
-					 });
-
-			 });
-		},
-		closeModal: function() {
-			var container = $("div#modal");
-
-			// Remove modal on click background
-			container.on('click', function() {
-				container.remove();
-
-			});
-			// Remove modal on keypress ESC
-			$(document).on( 'keydown', function (e) {
-					if ( e.keyCode === 27 ) {
-						 container.remove();
-					}
-			});
-			// You can click on modal body
-			container.find('div.modal-body').on('click', function(e) {
-				e.stopPropagation();
-			});
-		}
-	};
-
-	modal.init();
-
-})
+$(document).ready(function(){
+  GetSetCookie();
+});

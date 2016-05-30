@@ -2,175 +2,24 @@
 <html>
 <head>
 	<title>OurUCLA</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/reset.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-  <link href="css/index.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/isotope.css">
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/slick-theme.css">
+	<link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-  <div id="page-wrap">
-    <div id="top-bar" class="row">
-      <div id="top-bar-content" class="container">
-        <a id="daily-bruin-link" href="http://dailybruin.com/">Daily Bruin</a>
-        <ul id="weather-date">
-          <li class="inline">[PICURE HERE] Sunny Days Ahead! | </li>
-          <li class="inline">Grad Issue | </li>
-          <li class="inline">June 6, 2016</li>
-        </ul>
-      </div>
-    </div>
-    <div id="header" class="row">
-      <div id="header-content" class="container">
-        <img src="img/ucla-white-logo.png" id="ucla-logo" />
-        <p id="header-content-text">
-          OurUCLA
-        </p>
-        <div class="row nav-bar-container">
-          <ul id="nav-bar">
-            <li class="inline"><a href="">Section 1</a></li> |
-            <li class="inline"><a href="">Section 2</a></li> |
-            <li class="inline"><a href="">Section 3</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div id="content-wrapper" class="container">
-      <div id="content" class="row">
-        <h1>Grad Issue 2016:</h1>
-        <p>Will the editor in chief write a little message like he did for grad issue 2014? If he does we could put it here.</p>
-        <hr />
-
-        <div class="center">
-          <div>CONTENT1</div>
-          <div>CONTENT2</div>
-          <div>CONTENT3</div>
-          <div>CONTENT4</div>
-          <div>CONTENT5</div>
-          <div>CONTENT6</div>
-          <div>CONTENT7</div>
-        </div>
-
-        <h2>Filter</h2>
-        <div id="filters" class="button-group">
-          <button class="btn btn-default is-checked" data-filter="*">All</button>
-          <button class="btn btn-default" data-filter=".sports">Sports</button>
-          <button class="btn btn-default" data-filter=".ae">A&amp;E</button>
-          <button class="btn btn-default" data-filter=".news">News</button>
-          <button class="btn btn-default" data-filter=".opinion">Opinion</button>
-          <button class="btn btn-default" data-filter=".video">Video</button>
-          <button class="btn btn-default" data-filter=".radio">Radio</button>
-          <button class="btn btn-default" data-filter=".blog">Blog!!! (NEED COLOR)</button>
-        </div>
-
-        <div class="grid">
-          <div class="element-item sports">
-            <div class="element-overlay">
-              <h3 class="name">Mercury</h3>
-              <p class="symbol">Sp</p>
-              <p class="number">80</p>
-              <p class="weight">200.59</p>
-            </div>
-          </div>
-          <div class="element-item ae">
-            <div class="element-overlay">
-              <h3 class="name">Mercury</h3>
-              <p class="symbol">Ae</p>
-              <p class="number">80</p>
-              <p class="weight">200.59</p>
-            </div>
-          </div>
-          <div class="element-item radio">
-            <div class="element-overlay">
-              <h3 class="name">Mercury</h3>
-              <p class="symbol">Ra</p>
-              <p class="number">80</p>
-              <p class="weight">200.59</p>
-            </div>
-          </div>
-          <div class="element-item video">
-            <div class="element-overlay">
-              <h3 class="name">Mercury</h3>
-              <p class="symbol">Vi</p>
-              <p class="number">80</p>
-              <p class="weight">200.59</p>
-            </div>
-          </div>
-          <div class="element-item opinion">
-            <div class="element-overlay">
-              <h3 class="name">Mercury</h3>
-              <p class="symbol">Op</p>
-              <p class="number">80</p>
-              <p class="weight">200.59</p>
-            </div>
-          </div>
-          <div class="element-item news">
-            <div class="element-overlay">
-              <h3 class="name">Mercury</h3>
-              <p class="symbol">Ne</p>
-              <p class="number">80</p>
-              <p class="weight">200.59</p>
-            </div>
-          </div>
-
-        </div>
-
-				<h1> -30- Columns</h1>
-				<a href="#" data-behaviour="modal" data-title="1 title of modal" data-content="1 content goes here">Lorem ipsum</a>
-      </div>
-    </div>
-
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.0/isotope.pkgd.min.js"></script>
-  <script src="js/isotope.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/slick.min.js"></script>
-	<script src="js/handlebars-v4.0.5.js"></script>
-  <script>
-  $(document).ready(function(){
-    $('.center').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 3,
-      dots: true,
-      //uncomment later
-      //autoplay: true,
-      //autoplaySpeed: 2000,
-      responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-      ]
-    });
-
-  });
-  </script>
-	<!-- -30- columns -->
-	<script id="modal-template" type="text/x-handlebars-template">
-		<div id="modal" class="modal">
-			<div class="modal-body">
-				<h2>{{ title }}</h2>
-				<p>{{ content }}</p>
-			</div>
-		</div>
-	</script>
+	<header class="logo" role="banner">
+		<img src="https://shb.ais.ucla.edu/shibboleth-idp/images/ucla-white.png" alt="UCLA">
+	</header>
+	<section class="content" role ="main">
+		<div class="element"></div>
+		<div class="element-two"></div>
+		<form id="login" role="form">
+    		<legend>Sign In with your UCLA Logon ID</legend>
+    		<p><input type="text" id="username"></p>
+    		<p><input type="text" id="password"></p>
+    		<button class="logon-button">Sign In</button>
+    </form>
+  </section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/typed.min.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>
