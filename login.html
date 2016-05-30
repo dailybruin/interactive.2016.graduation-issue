@@ -15,34 +15,14 @@
 		<div class="element-two"></div>
 		<form id="login" role="form">
     		<legend>Sign In with your UCLA Logon ID</legend>
-    		<p><input type="text" id="username" placeholder="Your UCLA Logon ID"></p>
-    		<p><input type="text" id="password" placeholder="Your UCLA Logon Password"></p>
-    		<button class="logon-button" type="submit">Sign In</button>
+    		<p><input type="text" id="username"></p>
+    		<p><input type="text" id="password"></p>
+    		<button class="logon-button">Sign In</button>
     </form>
   </section>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/typed.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-
-	<script>
-	  $(function(){
-				document.getElementById("username").style.(border-color) = "blue";
-	      $("#username").typed({
-	        strings: ["Joe Bruin", "Josephine Bruin"],
-	        typeSpeed: 0
-	      }).call ;
-
-		  $("#password").typed({
-	        strings: ["WASSUP BROS"],
-	        typeSpeed: 0
-	      });
-	  });
-	  $(function(){
-	  	$('.carousel').slick({
-	  		rt1: true
-	  	});
-	  });
-	</script>
+	<script src="js/login.js"></script>
 </body>
 </html>

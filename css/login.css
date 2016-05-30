@@ -24,6 +24,7 @@ section[role="main"] {
 	margin-bottom: 8em;
 	display: block;
 	width: 100%;
+	margin: 50px 0px;
 }
 
 #login {
@@ -108,34 +109,6 @@ button {
     100% { opacity:1; }
 }
 
-
-/*animated typing with css
-
-input[type="text"]
-{
-    width: 30em;
-    white-space:nowrap;
-    overflow:hidden;
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
-}
-
-input[type="password"]
-{
-    width: 30em;
-    white-space:nowrap;
-    overflow:hidden;
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
-}
-
-
-@keyframes type{
-    from { width: 0; }
-}
-
-@-webkit-keyframes type{
-    from { width: 0; }
-}
-
-*/
+/*=================
+  Login Animation
+=================*/
