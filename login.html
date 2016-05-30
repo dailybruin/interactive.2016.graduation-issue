@@ -10,24 +10,16 @@
 	<header class="logo" role="banner">
 		<img src="https://shb.ais.ucla.edu/shibboleth-idp/images/ucla-white.png" alt="UCLA">
 	</header>
-
-	<!--related to the typed.js-->
-	<div class="element"></div>
-	<div class="element-two"></div>
-
-	<div class="carousel">
-		<div>content</div>
-		<div>content2</div>
-	</div>
-
 	<section class="content" role ="main">
+		<div class="element"></div>
+		<div class="element-two"></div>
 		<form id="login" role="form">
     		<legend>Sign In with your UCLA Logon ID</legend>
-    		<p><input type="text" placeholder="Your UCLA Logon ID"></p>
-    		<p><input type="password" placeholder="Your UCLA Logon Password"></p>
+    		<p><input type="text" id="username" placeholder="Your UCLA Logon ID"></p>
+    		<p><input type="text" id="password" placeholder="Your UCLA Logon Password"></p>
     		<button class="logon-button" type="submit">Sign In</button>
-    	</form>
-    </section>
+    </form>
+  </section>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/typed.min.js"></script>
@@ -35,23 +27,22 @@
 
 	<script>
 	  $(function(){
-	      $(".element").typed({
-	        strings: ["Joe Bruin", "Josephine Bruin"], //idk what name to put
+				document.getElementById("username").style.(border-color) = "blue";
+	      $("#username").typed({
+	        strings: ["Joe Bruin", "Josephine Bruin"],
+	        typeSpeed: 0
+	      }).call ;
+
+		  $("#password").typed({
+	        strings: ["WASSUP BROS"],
 	        typeSpeed: 0
 	      });
-
-		  $(".element-two").typed({
-	        strings: ["Password"],
-	        typeSpeed: 0
-	      });	      
 	  });
-
 	  $(function(){
 	  	$('.carousel').slick({
 	  		rt1: true
 	  	});
 	  });
-	
 	</script>
 </body>
 </html>
