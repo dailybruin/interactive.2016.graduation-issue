@@ -1,6 +1,13 @@
 body{
+  max-width: 100%;
+  overflow-x: hidden;
   margin: 0px;
 }
+
+/*=================
+      Classes
+=================*/
+
 
 /*=================
       ALL IDS
@@ -100,7 +107,7 @@ body{
       CONTENT
 =================*/
 #content-wrapper{
-  margin: 0 auto;
+
 }
 
 #content{
