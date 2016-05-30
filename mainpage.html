@@ -5,7 +5,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="css/reset.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-  <link href="css/index.css" rel="stylesheet">
+  <link href="css/mainpage.css" rel="stylesheet">
   <link rel="stylesheet" href="css/isotope.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
@@ -42,27 +42,23 @@
         <h1>Grad Issue 2016:</h1>
         <p>Will the editor in chief write a little message like he did for grad issue 2014? If he does we could put it here.</p>
         <hr />
-
+        
         <div class="center">
           <div>CONTENT1</div>
           <div>CONTENT2</div>
           <div>CONTENT3</div>
           <div>CONTENT4</div>
-          <div>CONTENT5</div>
-          <div>CONTENT6</div>
-          <div>CONTENT7</div>
         </div>
 
         <h2>Filter</h2>
-        <div id="filters" class="button-group">  
-          <button class="btn btn-default is-checked" data-filter="*">All</button>
-          <button class="btn btn-default" data-filter=".sports">Sports</button>
-          <button class="btn btn-default" data-filter=".ae">A&amp;E</button>
-          <button class="btn btn-default" data-filter=".news">News</button>
-          <button class="btn btn-default" data-filter=".opinion">Opinion</button>
-          <button class="btn btn-default" data-filter=".video">Video</button>
-          <button class="btn btn-default" data-filter=".radio">Radio</button>
-          <button class="btn btn-default" data-filter=".blog">Blog!!! (NEED COLOR)</button>
+        <div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
+          <button class="button" data-filter=".sports">Sports</button>
+          <button class="button" data-filter=".ae">A&amp;E</button>
+          <button class="button" data-filter=".news">News</button>
+          <button class="button" data-filter=".opinion">Opinion</button>
+          <button class="button" data-filter=".video">Video</button>
+          <button class="button" data-filter=".radio">Radio</button>
+          <button class="button" data-filter=".blog">Blog!!! (NEED COLOR)</button>
         </div>
 
         <div class="grid">
@@ -114,21 +110,18 @@
               <p class="weight">200.59</p>
             </div>
           </div>
-
+          
         </div>
-
-				<h1> -30- Columns</h1>
-				<a href="#" data-behaviour="modal" data-title="1 title of modal" data-content="1 content goes here">Lorem ipsum</a>
       </div>
     </div>
-
+    
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.0/isotope.pkgd.min.js"></script>
   <script src="js/isotope.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/mainpage.js"></script>
   <script src="js/slick.min.js"></script>
-	<script src="js/handlebars-v4.0.5.js"></script>
+
   <script>
   $(document).ready(function(){
     $('.center').slick({
@@ -162,15 +155,8 @@
     });
 
   });
+  
   </script>
-	<!-- -30- columns -->
-	<script id="modal-template" type="text/x-handlebars-template">
-		<div id="modal" class="modal">
-			<div class="modal-body">
-				<h2>{{ title }}</h2>
-				<p>{{ content }}</p>
-			</div>
-		</div>
-	</script>
+
 </body>
 </html>
