@@ -122,3 +122,18 @@ body{
 .center {
   text-align: center;
 }
+
+.center img {
+  max-width: 100%;
+  height: auto;
+}
+
+#overlay {
+ opacity:1;
+ -webkit-transition: opacity .25s ease;
+ -moz-transition: opacity .25s ease;
+}
+
+ #box:hover #overlay {
+   opacity:2;
+ }
