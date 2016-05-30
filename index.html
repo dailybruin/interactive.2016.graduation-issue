@@ -42,7 +42,7 @@
         <h1>Grad Issue 2016:</h1>
         <p>Will the editor in chief write a little message like he did for grad issue 2014? If he does we could put it here.</p>
         <hr />
-        
+
         <div class="center">
           <div>CONTENT1</div>
           <div>CONTENT2</div>
@@ -110,19 +110,21 @@
               <p class="weight">200.59</p>
             </div>
           </div>
-          
+
         </div>
+
+				<h1> -30- Columns</h1>
+				<a href="#" data-behaviour="modal" data-title="1 title of modal" data-content="1 content goes here">Lorem ipsum</a>
       </div>
     </div>
-    
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.0/isotope.pkgd.min.js"></script>
   <script src="js/isotope.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/mainpage.js"></script>
   <script src="js/slick.min.js"></script>
-
+	<script src="js/handlebars-v4.0.5.js"></script>
   <script>
   $(document).ready(function(){
     $('.center').slick({
@@ -156,8 +158,15 @@
     });
 
   });
-  
   </script>
-
+	<!-- -30- columns -->
+	<script id="modal-template" type="text/x-handlebars-template">
+		<div id="modal" class="modal">
+			<div class="modal-body">
+				<h2>{{ title }}</h2>
+				<p>{{ content }}</p>
+			</div>
+		</div>
+	</script>
 </body>
 </html>
