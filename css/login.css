@@ -23,6 +23,7 @@ body {
 section[role="main"] {
 	margin-bottom: 8em;
 	display: block;
+	width: 100%;
 }
 
 #login {
@@ -30,9 +31,9 @@ section[role="main"] {
 	box-shadow: 0 1px 1px #347bad;
 	border-radius: 3px;
 	padding: 2em 4em;
-	position: fixed;
+	max-width: 30em;
 	overflow: hidden;
-	margin: 1em 0 0; /*need to figure out margins*/
+	margin: auto; /*need to figure out margins*/
 }
 
 legend {
@@ -48,7 +49,6 @@ legend {
 
 input, select {
 	display: inline-block;
-	color: #ccc;
 	border: 1px solid;
 	border-radius: 3px;
 	border-color: #ff80d2;
@@ -91,6 +91,7 @@ button {
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
@@ -106,6 +107,7 @@ button {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
 
 /*animated typing with css
 

@@ -3,38 +3,46 @@
 <head>
 	<title>OurUCLA</title>
 	<link href="css/login.css" rel="stylesheet">
+	<!--carousel-->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 </head>
 <body>
 	<header class="logo" role="banner">
 		<img src="https://shb.ais.ucla.edu/shibboleth-idp/images/ucla-white.png" alt="UCLA">
 	</header>
+	<section class="content" role ="main">
 		<div class="element"></div>
 		<div class="element-two"></div>
-	<section class="content" role ="main">
 		<form id="login" role="form">
     		<legend>Sign In with your UCLA Logon ID</legend>
-    		<p><input type="text" placeholder="Your UCLA Logon ID"></p>
-    		<p><input type="password" placeholder="Your UCLA Logon Password"></p>
+    		<p><input type="text" id="username" placeholder="Your UCLA Logon ID"></p>
+    		<p><input type="text" id="password" placeholder="Your UCLA Logon Password"></p>
     		<button class="logon-button" type="submit">Sign In</button>
-    	</form>
-    </section>
+    </form>
+  </section>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/typed.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
 	<script>
 	  $(function(){
-	      $(".element").typed({
-	        strings: ["Joe Bruin", "Josephine Bruin"], 
+				document.getElementById("username").style.(border-color) = "blue";
+	      $("#username").typed({
+	        strings: ["Joe Bruin", "Josephine Bruin"],
+	        typeSpeed: 0
+	      }).call ;
+
+		  $("#password").typed({
+	        strings: ["WASSUP BROS"],
 	        typeSpeed: 0
 	      });
-
-		  $(".element-two").typed({
-	        strings: ["Password"],
-	        typeSpeed: 0
-	      });	      
 	  });
-
-	
+	  $(function(){
+	  	$('.carousel').slick({
+	  		rt1: true
+	  	});
+	  });
 	</script>
 </body>
 </html>
