@@ -107,35 +107,3 @@ button {
     50% { opacity:0; }
     100% { opacity:1; }
 }
-
-
-/*animated typing with css
-
-input[type="text"]
-{
-    width: 30em;
-    white-space:nowrap;
-    overflow:hidden;
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
-}
-
-input[type="password"]
-{
-    width: 30em;
-    white-space:nowrap;
-    overflow:hidden;
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
-}
-
-
-@keyframes type{
-    from { width: 0; }
-}
-
-@-webkit-keyframes type{
-    from { width: 0; }
-}
-
-*/
