@@ -123,21 +123,19 @@ body{
   text-align: center;
 }
 
-
-#content-wrapper{
-
+.center img {
+  max-width: 100%;
+  height: auto;
 }
 
-#content{
-  margin: -20px 0 45px;
-  padding: 50px 30px;
-  background-color: white; /*REMOVE THIS LATER*/
-  min-height: 2000px; /*REMOVE THIS LATER*/
+#overlay {
+ opacity:1;
+ -webkit-transition: opacity .25s ease;
+ -moz-transition: opacity .25s ease;
 }
 
-/*carousel styling*/
-.center {
-  text-align: center;
+ #box:hover #overlay {
+   opacity:2;
 }
 
 /*=================
