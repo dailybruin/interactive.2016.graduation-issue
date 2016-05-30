@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
   <link href="css/index.css" rel="stylesheet">
   <link rel="stylesheet" href="css/isotope.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
 </head>
 <body>
   <div id="page-wrap">
@@ -40,7 +42,13 @@
         <h1>Grad Issue 2016:</h1>
         <p>Will the editor in chief write a little message like he did for grad issue 2014? If he does we could put it here.</p>
         <hr />
-        <img style="margin: 0 auto; display: block;" src="https://www.wsfsbank.com/~/media/1000x500-Placeholder.ashx" />
+        
+        <div class="center">
+          <div>CONTENT1</div>
+          <div>CONTENT2</div>
+          <div>CONTENT3</div>
+          <div>CONTENT4</div>
+        </div>
 
         <h2>Filter</h2>
         <div id="filters" class="button-group">  
@@ -113,5 +121,43 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.0/isotope.pkgd.min.js"></script>
   <script src="js/isotope.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/slick.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    $('.center').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      dots: true,
+      //uncomment later
+      //autoplay: true,
+      //autoplaySpeed: 2000,
+      responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+      ]
+    });
+
+  });
+  
+  </script>
+
 </body>
 </html>
