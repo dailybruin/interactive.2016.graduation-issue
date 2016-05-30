@@ -77,7 +77,37 @@ button {
 	border-radius: 3px;
 }
 
-/*animated typing*/
+.element {
+	font-family: "Proxima Nova", sans-serif;
+}
+
+.element-two {
+	font-family: "Proxima Nova", sans-serif;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/*animated typing with css
 
 input[type="text"]
 {
@@ -105,3 +135,5 @@ input[type="password"]
 @-webkit-keyframes type{
     from { width: 0; }
 }
+
+*/

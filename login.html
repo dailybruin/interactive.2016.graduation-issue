@@ -8,6 +8,8 @@
 	<header class="logo" role="banner">
 		<img src="https://shb.ais.ucla.edu/shibboleth-idp/images/ucla-white.png" alt="UCLA">
 	</header>
+		<div class="element"></div>
+		<div class="element-two"></div>
 	<section class="content" role ="main">
 		<form id="login" role="form">
     		<legend>Sign In with your UCLA Logon ID</legend>
@@ -15,17 +17,24 @@
     		<p><input type="password" placeholder="Your UCLA Logon Password"></p>
     		<button class="logon-button" type="submit">Sign In</button>
     	</form>
-		<div class="element"></div>
-  </section>
+    </section>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/typed.min.js"></script>
 	<script>
 	  $(function(){
 	      $(".element").typed({
-	        strings: ["First sentence.", "Second sentence."],
+	        strings: ["Joe Bruin", "Josephine Bruin"], 
 	        typeSpeed: 0
 	      });
+
+		  $(".element-two").typed({
+	        strings: ["Password"],
+	        typeSpeed: 0
+	      });	      
 	  });
+
+	
 	</script>
 </body>
 </html>
