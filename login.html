@@ -3,13 +3,23 @@
 <head>
 	<title>OurUCLA</title>
 	<link href="css/login.css" rel="stylesheet">
+	<!--carousel-->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 </head>
 <body>
 	<header class="logo" role="banner">
 		<img src="https://shb.ais.ucla.edu/shibboleth-idp/images/ucla-white.png" alt="UCLA">
 	</header>
-		<div class="element"></div>
-		<div class="element-two"></div>
+
+	<!--related to the typed.js-->
+	<div class="element"></div>
+	<div class="element-two"></div>
+
+	<div class="carousel">
+		<div>content</div>
+		<div>content2</div>
+	</div>
+
 	<section class="content" role ="main">
 		<form id="login" role="form">
     		<legend>Sign In with your UCLA Logon ID</legend>
@@ -21,10 +31,12 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/typed.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
 	<script>
 	  $(function(){
 	      $(".element").typed({
-	        strings: ["Joe Bruin", "Josephine Bruin"], 
+	        strings: ["Joe Bruin", "Josephine Bruin"], //idk what name to put
 	        typeSpeed: 0
 	      });
 
@@ -34,6 +46,11 @@
 	      });	      
 	  });
 
+	  $(function(){
+	  	$('.carousel').slick({
+	  		rt1: true
+	  	});
+	  });
 	
 	</script>
 </body>
