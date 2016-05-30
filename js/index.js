@@ -25,8 +25,8 @@ var type2 = function(){
     // character for cursor
     cursorChar: "|",
     callback: function(){
-      $(".logon-button").css("background-color", "yellow") 
-      window.location.href = "main.html";
+      $(".logon-button").css("background-color", "yellow"); 
+      window.location.replace("main.html");
     },
   });
 }
@@ -36,18 +36,18 @@ function GetSetCookie() {
   if (version != null && version != "") {
     if (version == 'full') {
       version = 'text';
-      type1(type2);
     }
     else {
       version = 'full';
-      window.location.href = "main.html";
     }
+    // window.location.replace("main.html");
   }
   else {
     version = 'full';
-    console.log('line 15');
+    window.location.replace("main.html");
   }
-  setCookie("version", version, 365);
+  setCookie("version", version, 1);
+  type1(type2);
 }
 function setCookie(c_name, value, exdays) {
   var exdate = new Date();
