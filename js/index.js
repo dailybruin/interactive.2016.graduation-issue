@@ -15,7 +15,7 @@ function GetSetCookie() {
     console.log('line 15');
   }
   setCookie("version", version, 365);
-  window.top.location.reload();
+  // window.top.location.reload();
 }
 function setCookie(c_name, value, exdays) {
   var exdate = new Date();
@@ -36,7 +36,6 @@ function getCookie(c_name) {
 }
 
 $(document).ready(function(){
-  GetSetCookie();
 
   $('.login-button').on("click",function(e){
     e.preventDefault;
@@ -66,8 +65,8 @@ $(document).ready(function(){
           callback: function(){
             $(".logon-button").css("background-color", "yellow") 
 
-
-            window.location.replace("main.html");
+            GetSetCookie();
+            // window.location.href = "main.html";
 
           },
         });
@@ -77,3 +76,4 @@ $(document).ready(function(){
 
 
 });
+
