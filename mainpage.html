@@ -1,45 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<title>OurUCLA</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/mainpage.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id="page-wrap">
-      <div id="top-bar" class="row">
-        <div id="top-bar-content" class="container">
-          <a id="daily-bruin-link" href="http://dailybruin.com/">Daily Bruin</a>
-          <ul id="weather-date">
-            <li class="inline">[PICURE HERE] Sunny Days Ahead! | </li>
-            <li class="inline">Grad Issue | </li>
-            <li class="inline">June 6, 2016</a></li>
+<head>
+	<title>OurUCLA</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+  <link href="css/mainpage.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/isotope.css">
+</head>
+<body>
+  <div id="page-wrap">
+    <div id="top-bar" class="row">
+      <div id="top-bar-content" class="container">
+        <a id="daily-bruin-link" href="http://dailybruin.com/">Daily Bruin</a>
+        <ul id="weather-date">
+          <li class="inline">[PICURE HERE] Sunny Days Ahead! | </li>
+          <li class="inline">Grad Issue | </li>
+          <li class="inline">June 6, 2016</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="header" class="row">
+      <div id="header-content" class="container">
+        <img src="img/ucla-white-logo.png" id="ucla-logo" />
+        <p id="header-content-text">
+          OurUCLA
+        </p>
+        <div class="row nav-bar-container">
+          <ul id="nav-bar">
+            <li class="inline"><a href="">Section 1</a></li> |
+            <li class="inline"><a href="">Section 2</a></li> |
+            <li class="inline"><a href="">Section 3</a></li>
           </ul>
         </div>
       </div>
-      <div id="header" class="row">
-        <div id="header-content" class="container">
-          <img src="img/ucla-white-logo.png" id="ucla-logo" />
-          <p id="header-content-text">
-            OurUCLA
-          </p>
-          <div class="row nav-bar-container">
-            <ul id="nav-bar">
-              <li class="inline"><a href="">Section 1</a></li> |
-              <li class="inline"><a href="">Section 2</a></li> |
-              <li class="inline"><a href="">Section 3</a></li>
-            </ul>
-          </div>
+    </div>
+    <div id="content-wrapper" class="container">
+      <div id="content" class="row">
+        <h1>Grad Issue 2016:</h1>
+        <p>Will the editor in chief write a little message like he did for grad issue 2014? If he does we could put it here.</p>
+        <hr />
+        <img style="margin: 0 auto; display: block;" src="https://www.wsfsbank.com/~/media/1000x500-Placeholder.ashx" />
+
+        <h2>Filter</h2>
+        <div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
+          <button class="button" data-filter=".sports">Sports</button>
+          <button class="button" data-filter=".ae">A&amp;E</button>
+          <button class="button" data-filter=".news">News</button>
+          <button class="button" data-filter=".opinion">Opinion</button>
+          <button class="button" data-filter=".video">Video</button>
+          <button class="button" data-filter=".radio">Radio</button>
+          <button class="button" data-filter=".blog">Blog!!! (NEED COLOR)</button>
         </div>
-      </div>
-      <div id="content-wrapper" class="container">
-        <div id="content" class="row">
-          <h1>Grad Issue 2016:</h1>
-          <p>Will the editor in chief write a little message like he did for grad issue 2014? If he does we could put it here.</p>
-          <hr />
-          <img src="https://www.wsfsbank.com/~/media/1000x500-Placeholder.ashx" />
+
+        <div class="grid">
+          <div class="element-item sports">
+            <div class="element-overlay">
+              <h3 class="name">Mercury</h3>
+              <p class="symbol">Sp</p>
+              <p class="number">80</p>
+              <p class="weight">200.59</p>
+            </div>
+          </div>
+          <div class="element-item ae">
+            <div class="element-overlay">
+              <h3 class="name">Mercury</h3>
+              <p class="symbol">Ae</p>
+              <p class="number">80</p>
+              <p class="weight">200.59</p>
+            </div>
+          </div>
+          <div class="element-item radio">
+            <div class="element-overlay">
+              <h3 class="name">Mercury</h3>
+              <p class="symbol">Ra</p>
+              <p class="number">80</p>
+              <p class="weight">200.59</p>
+            </div>
+          </div>
+          <div class="element-item video">
+            <div class="element-overlay">
+              <h3 class="name">Mercury</h3>
+              <p class="symbol">Vi</p>
+              <p class="number">80</p>
+              <p class="weight">200.59</p>
+            </div>
+          </div>
+          <div class="element-item opinion">
+            <div class="element-overlay">
+              <h3 class="name">Mercury</h3>
+              <p class="symbol">Op</p>
+              <p class="number">80</p>
+              <p class="weight">200.59</p>
+            </div>
+          </div>
+          <div class="element-item news">
+            <div class="element-overlay">
+              <h3 class="name">Mercury</h3>
+              <p class="symbol">Ne</p>
+              <p class="number">80</p>
+              <p class="weight">200.59</p>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
-  </body>
+    
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.0/isotope.pkgd.min.js"></script>
+  <script src="js/isotope.js"></script>
+  <script src="js/mainpage.js"></script>
+</body>
 </html>
