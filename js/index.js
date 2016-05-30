@@ -1,52 +1,72 @@
-$(document).ready(function() {
-	/*carousel*/
-    $('.center').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 3,
-      dots: true,
-      //uncomment later
-      //autoplay: true,
-      //autoplaySpeed: 2000,
-      responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-      ]
-    });
+var type1 = function(callbackFunction){
+  $('.login-button').on("click",function(e){
+    e.preventDefault;
+  });
 
-	/*isotope*/
-	$(".element-item").on('mouseover', function() {
-		this.style.cursor = "pointer";
-		$('.element-overlay').css('opacity', 1);
-	})
-	$(".element-item").on('mouseout', function() {
-		this.style.cursor = "pointer";
-		$('.element-overlay').css('opacity', 0);
-	})
+  $("#username").css("border-color", "green");
 
-	/* for the -30- column, using handlebars */
-	// Grab the template script
-	var theTemplateScript = $("#data-template").html();
+  $("#username").typed({
+    strings: ["Joe Bruin", "Josephine Bruin"],
+    typeSpeed: 14,
+    callback: function(){
+      callbackFunction();
+    },
+    showCursor: true,
+    // character for cursor
+    cursorChar: "|"
+  });
+}
+var type2 = function(){
+  $("#password").css("border-color", "green");
+  $("#password").typed({
+    strings: ["^400Congratulations Class of 2016!"],
+    typeSpeed: 14,
+    showCursor: true,
+    // character for cursor
+    cursorChar: "|",
+    callback: function(){
+      $(".logon-button").css("background-color", "yellow"); 
+      window.location.replace("main.html");
+    },
+  });
+}
 
-	// Compile the template
-	var theTemplate = Handlebars.compile(theTemplateScript);
+function GetSetCookie() {
+  var version = getCookie("version");
+  if (version != null && version != "") {
+    if (version == 'full') {
+      version = 'text';
+    }
+    else {
+      version = 'full';
+    }
+    // window.location.replace("main.html");
+  }
+  else {
+    version = 'full';
+    window.location.replace("main.html");
+  }
+  setCookie("version", version, 1);
+  type1(type2);
+}
+function setCookie(c_name, value, exdays) {
+  var exdate = new Date();
+  exdate.setDate(exdate.getDate() + exdays);
+  var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+  document.cookie = c_name + "=" + c_value + "; path=/";
+}
+function getCookie(c_name) {
+  var i, x, y, ARRcookies = document.cookie.split(";");
+  for (i = 0; i < ARRcookies.length; i++) {
+    x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+    y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+    x = x.replace(/^\s+|\s+$/g, "");
+    if (x == c_name) {
+      return unescape(y);
+    }
+  }
+}
 
-	// Add the compiled html to the page
-	$('.the-30-Columns').html(theTemplate);
-})
+$(document).ready(function(){
+  GetSetCookie();
+});
