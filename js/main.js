@@ -1,8 +1,9 @@
 $(document).ready(function() {
+	/*slick*/
 	$('.center').slick({
 	  centerMode: true,
 	  centerPadding: '60px',
-	  slidesToShow: 3,
+	  slidesToShow: 3, //should we do like one item at a time? bc imgs r hella small
 	  dots: true,
 	  //uncomment later
 	  //autoplay: true,

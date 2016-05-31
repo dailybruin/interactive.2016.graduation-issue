@@ -128,14 +128,31 @@ body{
   height: auto;
 }
 
-#overlay {
- opacity:1;
- -webkit-transition: opacity .25s ease;
- -moz-transition: opacity .25s ease;
+.content {
+  position: relative;
 }
 
- #box:hover #overlay {
-   opacity:2;
+#inner-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#overlay-headline {
+  display: none;
+}
+
+.content:hover #overlay-headline{
+  display: block;
+  color: red; /*lmao change this just chose this color to see if it was working*/
+  text-align: center;
+  line-height: 50px;
+}
+
+.content:hover {
+  opacity: 0.5; /*add corresponding colors later?*/
 }
 
 /*=================
