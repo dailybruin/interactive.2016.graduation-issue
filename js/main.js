@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+	/* this is for smooth scrolling for the navbar*/
+	$(function() {
+		$('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top - 15
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+
 	/*for updating date*/
 	function updateClock() {
 		var now = new Date(),
@@ -13,7 +29,7 @@ $(document).ready(function() {
 		document.getElementById('time').innerHTML = [date];
 		setTimeout(updateClock, 1000);
 	}
-	updateClock(); 
+	updateClock();
 
 	/*slick*/
 	$('.center').slick({
@@ -138,19 +154,4 @@ $(document).ready(function() {
 
 	modal.init();
 
-	/* this is for smooth scrolling */
-	$(function() {
-	  $('a[href*="#"]:not([href="#"])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html, body').animate({
-	          scrollTop: target.offset().top - 15
-	        }, 1000);
-	        return false;
-	      }
-	    }
-	  });
-	});
 })
