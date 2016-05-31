@@ -59,6 +59,10 @@ body{
   display: inline;
 }
 
+.inline p {
+  display: inline;
+}
+
 /*=================
       HEADER
 =================*/
@@ -126,6 +130,7 @@ body{
 .center img {
   max-width: 100%;
   height: auto;
+  padding: 0 3px;
 }
 
 .content {
