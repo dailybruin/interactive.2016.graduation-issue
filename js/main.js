@@ -58,7 +58,7 @@ $(document).ready(function() {
 		},
 		clickToOpenModal: function(context, thisLink) {
 
-			$('a[data-behaviour="modal"]').on('click', function(e) {
+			$('img[data-behaviour="modal"]').on('click', function(e) {
 				var thisLink = $(this);
 
 				var context = {
