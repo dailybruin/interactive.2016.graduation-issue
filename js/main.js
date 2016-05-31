@@ -1,8 +1,25 @@
 $(document).ready(function() {
+
+	/*for updating date*/
+	function updateClock() {
+		var now = new Date(),
+		weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+		months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		date = [
+		weekday[now.getDay()] + ', ',
+		months[now.getMonth()],
+		now.getDate() + ', ',
+		now.getFullYear()].join(' ');
+		document.getElementById('time').innerHTML = [date];
+		setTimeout(updateClock, 1000);
+	}
+	updateClock(); 
+
+	/*slick*/
 	$('.center').slick({
 	  centerMode: true,
 	  centerPadding: '60px',
-	  slidesToShow: 3,
+	  slidesToShow: 3, //should we do like one item at a time? bc imgs r hella small
 	  dots: true,
 	  //uncomment later
 	  //autoplay: true,
