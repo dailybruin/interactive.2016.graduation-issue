@@ -131,7 +131,6 @@ body{
 .center img {
   max-width: 100%;
   height: auto;
-  padding: 0 3px;
 }
 
 .content {
@@ -157,8 +156,28 @@ body{
   line-height: 50px;
 }
 
-.content:hover {
-  opacity: 0.5; /*add corresponding colors later?*/
+.red:hover #inner-box {
+  background: rgba(210, 35, 42, 0.6);
+}
+
+.yellow:hover #inner-box {
+  background: rgba(223, 208, 93, 0.6);
+}
+
+.blue:hover #inner-box {
+  background: rgba(129, 162, 213, 0.6);
+}
+
+.darkblue:hover #inner-box {
+  background: rgba(0, 81, 129, 0.6);
+}
+
+.purple:hover #inner-box {
+  background: rgba(48, 15, 36, 0.6);  
+}
+
+.black:hover #inner-box {
+  background: rgba(84, 89, 90, 0.6); 
 }
 
 /*=================
