@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="css/isotope.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
+
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
   <div id="page-wrap">
@@ -81,67 +84,95 @@
 				<div id="section2">
         	<h2>Filter</h2>
 	        <div id="filters" class="button-group">
-	          <button class="btn btn-default is-checked" data-filter="*">All</button>
-	          <button class="btn btn-default" data-filter=".sports">Sports</button>
-	          <button class="btn btn-default" data-filter=".ae">A&amp;E</button>
-	          <button class="btn btn-default" data-filter=".news">News</button>
-	          <button class="btn btn-default" data-filter=".opinion">Opinion</button>
-	          <button class="btn btn-default" data-filter=".video">Video</button>
-	          <button class="btn btn-default" data-filter=".radio">Radio</button>
-	          <button class="btn btn-default" data-filter=".blog">Blog!!! (NEED COLOR)</button>
+	          <button class="btn btn-default is-checked" data-filter="all">All</button>
+	          <button class="btn btn-default" data-filter="sports">Sports</button>
+	          <button class="btn btn-default" data-filter="ae">A&amp;E</button>
+	          <button class="btn btn-default" data-filter="news">News</button>
+	          <button class="btn btn-default" data-filter="opinion">Opinion</button>
+	          <button class="btn btn-default" data-filter="video">Video</button>
+	          <button class="btn btn-default" data-filter="radio">Radio</button>
+	          <button class="btn btn-default" data-filter="blog">Blog!!! (NEED COLOR)</button>
 	        </div>
 
-	        <div class="grid">
-	          <div class="element-item sports">
-	            <div class="element-overlay">
-	              <h3 class="name">Mercury</h3>
-	              <p class="symbol">Sp</p>
-	              <p class="number">80</p>
-	              <p class="weight">200.59</p>
-	            </div>
-	          </div>
-	          <div class="element-item ae">
-	            <div class="element-overlay">
-	              <h3 class="name">Mercury</h3>
-	              <p class="symbol">Ae</p>
-	              <p class="number">80</p>
-	              <p class="weight">200.59</p>
-	            </div>
-	          </div>
-	          <div class="element-item radio">
-	            <div class="element-overlay">
-	              <h3 class="name">Mercury</h3>
-	              <p class="symbol">Ra</p>
-	              <p class="number">80</p>
-	              <p class="weight">200.59</p>
-	            </div>
-	          </div>
-	          <div class="element-item video">
-	            <div class="element-overlay">
-	              <h3 class="name">Mercury</h3>
-	              <p class="symbol">Vi</p>
-	              <p class="number">80</p>
-	              <p class="weight">200.59</p>
-	            </div>
-	          </div>
-	          <div class="element-item opinion">
-	            <div class="element-overlay">
-	              <h3 class="name">Mercury</h3>
-	              <p class="symbol">Op</p>
-	              <p class="number">80</p>
-	              <p class="weight">200.59</p>
-	            </div>
-	          </div>
-	          <div class="element-item news">
-	            <div class="element-overlay">
-	              <h3 class="name">Mercury</h3>
-	              <p class="symbol">Ne</p>
-	              <p class="number">80</p>
-	              <p class="weight">200.59</p>
-	            </div>
-	          </div>
-	        </div>
-				</div>
+          <div class="main">
+            <ul id="og-grid" class="og-grid">
+              <li class="og-grid-item">
+                <a class="sports" href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <div class="og-grid-item-overlay">
+                    <h3 class="name">Mercury</h3>
+                    <p class="symbol">Sp</p>
+                    <p class="weight">200.59</p>
+                  </div>
+                </a>
+              </li>
+              <li class="og-grid-item">
+                <a class="ae" href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <div class="og-grid-item-overlay">
+                    <h3 class="name">Mercury</h3>
+                    <p class="symbol">Sp</p>
+                    <p class="weight">200.59</p>
+                  </div>
+                </a>
+              </li>
+              <li class="og-grid-item">
+                <a class="opinion" href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <div class="og-grid-item-overlay">
+                    <h3 class="name">Mercury</h3>
+                    <p class="symbol">Sp</p>
+                    <p class="weight">200.59</p>
+                  </div>
+                </a>
+              </li>
+              <li class="og-grid-item">
+                <a class="video" href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <div class="og-grid-item-overlay">
+                    <h3 class="name">Mercury</h3>
+                    <p class="symbol">Sp</p>
+                    <p class="weight">200.59</p>
+                  </div>
+                </a>
+              </li>
+              <li class="og-grid-item">
+                <a class="sports" href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <div class="og-grid-item-overlay">
+                    <h3 class="name">Mercury</h3>
+                    <p class="symbol">Sp</p>
+                    <p class="weight">200.59</p>
+                  </div>
+                </a>
+              </li>
+              <li class="og-grid-item">
+                <a class="sports" href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <div class="og-grid-item-overlay">
+                    <h3 class="name">Mercury</h3>
+                    <p class="symbol">Sp</p>
+                    <p class="weight">200.59</p>
+                  </div>
+                </a>
+              </li>
+              <li class="og-grid-item">
+                <a class="sports" href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <div class="og-grid-item-overlay">
+                    <h3 class="name">Mercury</h3>
+                    <p class="symbol">Sp</p>
+                    <p class="weight">200.59</p>
+                  </div>
+                </a>
+              </li>
+              <li class="og-grid-item">
+                <a class="sports" href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <div class="og-grid-item-overlay">
+                    <h3 class="name">Mercury</h3>
+                    <p class="symbol">Sp</p>
+                    <p class="weight">200.59</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
 
 				<div id="section3">
 					<h1> -30- Columns</h1>
@@ -152,9 +183,7 @@
     </div>
   </div>
 </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.0/isotope.pkgd.min.js"></script>
-  <script src="js/isotope.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
   <script src="js/main.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/handlebars-v4.0.5.js"></script>
@@ -166,6 +195,12 @@
         <p>{{ content }}</p>
       </div>
     </div>
+  </script>
+  <script src="js/grid.js"></script>
+  <script>
+    $(function() {
+      Grid.init();
+    });
   </script>
 
 </body>

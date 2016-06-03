@@ -25,8 +25,8 @@ var type2 = function(){
     // character for cursor
     cursorChar: "|",
     callback: function(){
-      $(".logon-button").css("background-color", "yellow");
-      window.location.replace("main.html");
+      $(".logon-button").css("background-color", "yellow"); 
+      // window.location.replace("main.html");
     },
   });
 }
@@ -44,7 +44,7 @@ function GetSetCookie() {
   }
   else {
     version = 'full';
-    window.location.replace("main.html");
+    // window.location.replace("main.html");
   }
   setCookie("version", version, 1);
   type1(type2);

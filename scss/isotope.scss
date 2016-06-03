@@ -78,36 +78,44 @@ body {
 }
 
 /* ---- .element-item ---- */
-
-.element-item {
-  // position: relative !important;
-  display: inline-block;
-  // left: 0 !important;
-  // top: 0 !important;
-  // float: left;
-  width: 200px;
-  height: 200px;
-  margin: 5px;
-  // background: #888;
-  background: url('../img/howie.jpg') center;
-  background-size: 100%;
-  color: #262524;
+.og-grid-item {
+  .sports, .opinion, .blog, .ae, .radio, .news, .video {
+    background: url('../img/howie.jpg') center;
+    background-size: 100%;
+    width: 250px;
+    height: 250px;
+  }
 }
 
-.element-item > * {
-  margin: 0;
-  padding: 0;
-}
+// .og-grid-item {
+//   // position: relative !important;
+//   display: inline-block;
+//   // left: 0 !important;
+//   // top: 0 !important;
+//   // float: left;
+//   width: 200px;
+//   height: 200px;
+//   margin: 5px;
+//   // background: #888;
+//   background: url('../img/howie.jpg') center;
+//   background-size: 100%;
+//   color: #262524;
+// }
+
+// .og-grid-item > * {
+//   margin: 0;
+//   padding: 0;
+// }
 
 
-.sports   .element-overlay { background: rgba(129,162,213,0.6); }
-.opinion  .element-overlay { background: rgba(210,35,42,0.6);   }
-.video    .element-overlay { background: rgba(84,89,90,0.6);    }
-.ae       .element-overlay { background: rgba(223,208,93,0.6);  }
-.radio    .element-overlay { background: rgba(48,15,36,0.6);    }
-.news     .element-overlay { background: rgba(0,81,129,0.6)     }
+.sports   .og-grid-item-overlay { background: rgba(129,162,213,0.6); }
+.opinion  .og-grid-item-overlay { background: rgba(210,35,42,0.6);   }
+.video    .og-grid-item-overlay { background: rgba(84,89,90,0.6);    }
+.ae       .og-grid-item-overlay { background: rgba(223,208,93,0.6);  }
+.radio    .og-grid-item-overlay { background: rgba(48,15,36,0.6);    }
+.news     .og-grid-item-overlay { background: rgba(0,81,129,0.6)     }
 
-.element-overlay {
+.og-grid-item-overlay {
   width: 100%;
   height: 100%;
   padding: 10px;

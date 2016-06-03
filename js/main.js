@@ -1,4 +1,21 @@
 $(document).ready(function() {
+	// bind filter button click
+	$('#filters').on( 'click', 'button', function() {
+	  var filterValue = $( this ).attr('data-filter');
+	  $('.og-grid-item').css('display', 'none');
+	  $('.og-grid-item').filter(function() {
+	  	return $(this).children('a').eq(0).attr("class") == filterValue || filterValue == "all"; 
+	  }).css('display', 'inline-block');
+	});
+
+	// change is-checked class on buttons
+	$('.button-group').each( function( i, buttonGroup ) {
+	  var $buttonGroup = $( buttonGroup );
+	  $buttonGroup.on( 'click', 'button', function() {
+	    $buttonGroup.find('.is-checked').removeClass('is-checked');
+	    $( this ).addClass('is-checked');
+	  });
+	});
 
 	/* this is for smooth scrolling for the navbar*/
 	$(function() {
@@ -63,13 +80,13 @@ $(document).ready(function() {
 	});
 
 	/*isotope*/
-	$(".element-item").on('mouseover', function() {
+	$(".og-grid-item").on('mouseover', function() {
 		this.style.cursor = "pointer";
-		$('.element-overlay').css('opacity', 1);
+		$('.og-grid-item-overlay').css('opacity', 1);
 	})
-	$(".element-item").on('mouseout', function() {
+	$(".og-grid-item").on('mouseout', function() {
 		this.style.cursor = "pointer";
-		$('.element-overlay').css('opacity', 0);
+		$('.og-grid-item-overlay').css('opacity', 0);
 	})
 
 	/* for the -30- column, using handlebars */
