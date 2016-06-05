@@ -118,27 +118,43 @@
 
 				<div id="section3">
 					<h1> -30- Columns</h1>
-					<img class="30Column" data-behaviour="modal" data-title="Pauli" data-content="content goes here" src="img/pauli.jpg" style="height: 400px; width: 550px;"/>
-					<img class="30Column" data-behaviour="modal" data-title="Changie" data-content="content goes here" src="img/changi.jpg" style="height: 400px; width: 550px;"/>
+					<div class="modal-placeholder"></div>
 				</div>
       </div>
     </div>
   </div>
 </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/handlebars-v4.0.5.js"></script>
+
   <!-- -30- columns -->
   <script id="modal-template" type="text/x-handlebars-template">
-    <div id="modal" class="modal">
-      <div class="modal-body">
-        <h2>{{ title }}</h2>
-        <p>{{ content }}</p>
-      </div>
-    </div>
+	{{#each .}}
+		<a data-toggle="modal" data-target="#{{img}}" class="modal-link" href="#{{firstName}}" id="{{firstName}}">
+			<img src="img/{{img}}.jpg" class="thumb" style="height: 150px; width: 100px;"/>
+		</a>
+		<div class="modal fade" id="{{img}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          <div class="modal-mug-title">
+	          <img src="img/{{img}}.jpg" class="modal-thumb"/>
+	          <h3 class="modal-title" id="myModalLabel">{{ title }}</h3>
+	          </div>
+	      </div>
+	      <div class="modal-body">
+	        <p>{{ content }}<p>
+	      </div>
+	      <div class="modal-footer"></div>
+	    </div>
+	  </div>
+	</div>
+	{{/each}}
   </script>
-  <script src="js/grid.js"></script>
 
 </body>
 </html>

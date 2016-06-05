@@ -162,20 +162,12 @@ $.fn.imagesLoaded = function( callback ) {
 };
 
 $(document).ready(function() {
+
 	$(function() {
 	  $.ajax({
 	    dataType: "json",
 	    url: "https://spreadsheets.google.com/feeds/list/1hDaPw7LCZZaUEFPtQVXf3P0852Zvp1V8prF8BvnXyK8/od6/public/values?alt=json",
 	    success: function(data) {
-
-	    	// var section = "sports";
-	     //  var append = '<li class="og-grid-item"><a class=' + section + ' href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/howie.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."><div class="og-grid-item-overlay"> <h3 class="name">Mercury</h3> <p class="symbol">Sp</p> <p class="weight">200.59</p> </div> </a> </li>';
-
-	     //  for (i in data.feed.entry)
-	     //    $('#og-grid').append(append); 
-
-	      
-
 
 	      var source   = $("#item-template").html();
 
@@ -560,13 +552,23 @@ $(document).ready(function() {
 	  });
 	});
 
+	//some deeplinking
+	/*
+	if(window.location.hash){
+		var target = window.location.hash;
+		console.log(target);
+		$("html, body").scrollTop($(target).offset());
+		$(".modal").modal("show");
+		$(target).modal("show");
+	}*/
+
 
 	// bind filter button click
 	$('#filters').on( 'click', 'button', function() {
 	  var filterValue = $( this ).attr('data-filter');
 	  $('.og-grid-item').css('display', 'none');
 	  $('.og-grid-item').filter(function() {
-	  	return $(this).children('a').eq(0).attr("class") == filterValue || filterValue == "all"; 
+	  	return $(this).children('a').eq(0).attr("class") == filterValue || filterValue == "all";
 	  }).css('display', 'inline-block');
 	});
 
@@ -642,85 +644,48 @@ $(document).ready(function() {
 	});
 
 	/* for the -30- column, using handlebars */
-	var modal = {
-		init: function() {
-
-			// Setup the template
-			this.source = $("#modal-template").html();
-
-			// Setup outercontainer
-			this.outercontainer = $('#content');
-
-			// Get the stuff
-			this.clickToOpenModal();
-
-			// Close the stuff
-			this.closeModal();
-
+	data = [
+		{
+			"firstName": "paulina",
+			"name": "paulina lei",
+			"content": "PLEASE WORK",
+			 "img": "pauli"
 		},
-		clickToOpenModal: function(context, thisLink) {
-
-			$('img[data-behaviour="modal"]').on('click', function(e) {
-				var thisLink = $(this);
-
-				var context = {
-					title: thisLink.data('title'),
-					content: thisLink.data('content')
-				};
-
-				e.preventDefault();
-
-			 // Do nothing if open
-			 if ( modal.outercontainer.children('div#modal').length ) return;
-
-				 // Attach the content to the the modal
-				modal.attachTemplate(context, thisLink);
-
-				// Trigger the open event
-				thisLink.trigger('open');
-			});
-
+		{
+			"firstName": "chang",
+			"name": "chang liu",
+			"content": "PLEASE WORK",
+			 "img": "changi"
 		},
-		attachTemplate: function(context, thisLink) {
-			 var source = Handlebars.compile(this.source);
-
-				this.outercontainer
-					.append(source(context))
-					.promise()
-					.done(function() {
-
-					this
-						.children('div#modal')
-						.addClass('modal-visible');
-
-					 // Close the stuff
-					 thisLink.one('open', function() {
-						 modal.closeModal();
-					 });
-
-			 });
-		},
-		closeModal: function() {
-			var container = $("div#modal");
-
-			// Remove modal on click background
-			container.on('click', function() {
-				container.remove();
-
-			});
-			// Remove modal on keypress ESC
-			$(document).on( 'keydown', function (e) {
-					if ( e.keyCode === 27 ) {
-						 container.remove();
-					}
-			});
-			// You can click on modal body
-			container.find('div.modal-body').on('click', function(e) {
-				e.stopPropagation();
-			});
+		{
+			"firstName": "howard",
+			"name": "howard huang",
+			"content": "PLEASE WORK",
+			 "img": "howie"
 		}
-	};
+ 	];
 
-	modal.init();
+	// Grab the template script
+	var theTemplateScript = $("#modal-template").html();
+
+	// Compile the template
+	var theTemplate = Handlebars.compile(theTemplateScript);
+
+	var mydata = data;
+
+	// Pass our data to the template
+	var theCompiledHtml = theTemplate(mydata);
+
+	// Add the compiled html to the page
+	$('.modal-placeholder').html(theCompiledHtml);
+
+	//opening the modal
+	$(".modal-link").click(function(event){
+			event.preventDefault();
+			var target = $(this).attr("data-target");
+			var href = $(this).attr("href");
+			window.location.href = href;
+			$(target).modal("");
+	});
 
 })
