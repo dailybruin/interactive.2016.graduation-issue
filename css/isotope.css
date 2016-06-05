@@ -89,7 +89,7 @@ body {
 
 /* ---- .element-item ---- */
 /* line 82, ../scss/isotope.scss */
-.og-grid-item .sports, .og-grid-item .opinion, .og-grid-item .blog, .og-grid-item .ae, .og-grid-item .radio, .og-grid-item .news, .og-grid-item .video {
+.og-grid-item .sports, .og-grid-item .opinion, .og-grid-item .blog, .og-grid-item .ae, .og-grid-item .radio, .og-grid-item .news, .og-grid-item .video, .og-grid-item .photo {
   background: url("../img/howie.jpg") center;
   background-size: 100%;
   width: 250px;
