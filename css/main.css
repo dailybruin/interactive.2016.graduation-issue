@@ -183,3 +183,12 @@ body{
 /*=================
   -30- COLUMNS
 =================*/
+
+.thumb{
+  width: 100px;
+}
+
+.modal-thumb{
+  height: 300px;
+  width: 200px;
+}

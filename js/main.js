@@ -194,7 +194,7 @@ $(document).ready(function() {
 	        this.style.cursor = "pointer";
 	        $('.og-grid-item-overlay').css('opacity', 0);
 	      })
-	
+
 	      var Grid = (function() {
 
 	      	// list of items
@@ -231,7 +231,7 @@ $(document).ready(function() {
 	      		};
 
 	      	function init( config ) {
-	      		
+
 	      		// the settings..
 	      		settings = $.extend( true, {}, settings, config );
 
@@ -280,16 +280,16 @@ $(document).ready(function() {
 	      	}
 
 	      	function initEvents() {
-	      		
+
 	      		// when clicking an item, show the preview with the item´s info and large image.
 	      		// close the item if already expanded.
 	      		// also close if clicking on the item´s cross
 	      		initItemsEvents( $items );
-	      		
+
 	      		// on window resize get the window´s size again
 	      		// reset some values..
 	      		$window.on( 'debouncedresize', function() {
-	      			
+
 	      			scrollExtra = 0;
 	      			previewPos = -1;
 	      			// save item´s offset
@@ -346,7 +346,7 @@ $(document).ready(function() {
 	      				preview.update( $item );
 	      				return false;
 	      			}
-	      			
+
 	      		}
 
 	      		// update previewPos
@@ -397,7 +397,7 @@ $(document).ready(function() {
 	      			if( $item ) {
 	      				this.$item = $item;
 	      			}
-	      			
+
 	      			// if already expanded remove class "og-expanded" from current item and add it to new item
 	      			if( current !== -1 ) {
 	      				var $currentItem = $items.eq( current );
@@ -424,7 +424,7 @@ $(document).ready(function() {
 	      			this.$href.attr( 'href', eldata.href );
 
 	      			var self = this;
-	      			
+
 	      			// remove the current image in the preview
 	      			if( typeof self.$largeImg != 'undefined' ) {
 	      				self.$largeImg.remove();
@@ -442,13 +442,13 @@ $(document).ready(function() {
 	      						self.$largeImg = $img.fadeIn( 350 );
 	      						self.$fullimage.append( self.$largeImg );
 	      					}
-	      				} ).attr( 'src', eldata.largesrc );	
+	      				} ).attr( 'src', eldata.largesrc );
 	      			}
 
 	      		},
 	      		open : function() {
 
-	      			setTimeout( $.proxy( function() {	
+	      			setTimeout( $.proxy( function() {
 	      				// set the height for the preview and the item
 	      				this.setHeights();
 	      				// scroll to position the preview in the right place
@@ -482,7 +482,7 @@ $(document).ready(function() {
 	      				}
 
 	      			}, this ), 25 );
-	      			
+
 	      			return false;
 
 	      		},
@@ -528,7 +528,7 @@ $(document).ready(function() {
 	      			var position = this.$item.data( 'offsetTop' ),
 	      				previewOffsetT = this.$previewEl.offset().top - scrollExtra,
 	      				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
-	      			
+
 	      			$body.animate( { scrollTop : scrollVal }, settings.speed );
 
 	      		},
@@ -541,7 +541,7 @@ $(document).ready(function() {
 	      		}
 	      	}
 
-	      	return { 
+	      	return {
 	      		init : init,
 	      		addItems : addItems
 	      	};
@@ -644,7 +644,7 @@ $(document).ready(function() {
 	});
 
 	/* for the -30- column, using handlebars */
-	data = [
+	/*data = [
 		{
 			"firstName": "paulina",
 			"name": "paulina lei",
@@ -663,21 +663,30 @@ $(document).ready(function() {
 			"content": "PLEASE WORK",
 			 "img": "howie"
 		}
- 	];
+ 	];*/
 
-	// Grab the template script
-	var theTemplateScript = $("#modal-template").html();
+	$.ajax({
+		    dataType: "json",
+		    url: "https://spreadsheets.google.com/feeds/list/112kjLo2XgMZreb82sGYjVVPocq9Q1ZSGgsaCUS4-Kwg/od6/public/values?alt=json",
+				success: function(data) {
+						data = data.feed.entry;
+						console.log(data);
+						
+						// Grab the template script
+						var theTemplateScript = $("#modal-template").html();
 
-	// Compile the template
-	var theTemplate = Handlebars.compile(theTemplateScript);
+						// Compile the template
+						var theTemplate = Handlebars.compile(theTemplateScript);
 
-	var mydata = data;
+						var mydata = data;
 
-	// Pass our data to the template
-	var theCompiledHtml = theTemplate(mydata);
+						// Pass our data to the template
+						var theCompiledHtml = theTemplate(mydata);
 
-	// Add the compiled html to the page
-	$('.modal-placeholder').html(theCompiledHtml);
+						// Add the compiled html to the page
+						$('.modal-placeholder').html(theCompiledHtml);
+				}
+	});
 
 	//opening the modal
 	$(".modal-link").click(function(event){

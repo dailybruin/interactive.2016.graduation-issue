@@ -133,21 +133,21 @@
   <!-- -30- columns -->
   <script id="modal-template" type="text/x-handlebars-template">
 	{{#each .}}
-		<a data-toggle="modal" data-target="#{{img}}" class="modal-link" href="#{{firstName}}" id="{{firstName}}">
-			<img src="img/{{img}}.jpg" class="thumb" style="height: 150px; width: 100px;"/>
+		<a data-toggle="modal" data-target="#{{@index}}" class="modal-link" href="#{{firstName}}" id="{{firstName}}">
+			<img src="{{gsx$mugs.$t}}" class="thumb"/>
 		</a>
-		<div class="modal fade" id="{{img}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal fade" id="{{@index}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-lg">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 	          <div class="modal-mug-title">
-	          <img src="img/{{img}}.jpg" class="modal-thumb"/>
-	          <h3 class="modal-title" id="myModalLabel">{{ title }}</h3>
+	          <img src="{{gsx$mugs.$t}}" class="modal-thumb"/>
+	          <h3 class="modal-title" id="myModalLabel">{{ gsx$name.$t }}</h3>
 	          </div>
 	      </div>
 	      <div class="modal-body">
-	        <p>{{ content }}<p>
+	        <p>{{{ gsx$body.$t }}}<p>
 	      </div>
 	      <div class="modal-footer"></div>
 	    </div>
