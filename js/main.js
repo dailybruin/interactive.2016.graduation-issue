@@ -177,15 +177,15 @@ $(document).ready(function() {
 	      });
 
 	      var section_hash = {
-	      	"A&E" : "Ae",
-	      	"News" : "Ne",
-	      	"Sports" : "Sp",
-	      	"Opinion" : "Op",
-	      	"Photo" : "Ph",
-	      	"Video" : "Vi",
-	      	"Online" : "On",
-	      	"Radio" : "Ra",
-	      	"Blog" : "Bl"
+	      	"A&E" : "A",
+	      	"News" : "N",
+	      	"Sports" : "S",
+	      	"Opinion" : "O",
+	      	"Photo" : "P",
+	      	"Video" : "V",
+	      	"Online" : "O",
+	      	"Radio" : "R",
+	      	"Blog" : "B"
 	      }
 
 	      Handlebars.registerHelper('sec', function(s) {
@@ -394,7 +394,7 @@ $(document).ready(function() {
 	      			// create Preview structure:
 	      			this.$title = $( '<h3></h3>' );
 	      			this.$description = $( '<p></p>' );
-	      			this.$href = $( '<a href="#">Read More</a>' );
+	      			this.$href = $( '<a target="_blank" href="#">Read More</a>' );
 	      			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 	      			this.$loading = $( '<div class="og-loading"></div>' );
 	      			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
@@ -569,6 +569,23 @@ $(document).ready(function() {
 	});
 
 	//some deeplinking
+
+		// queryStrip
+	function queryStrip(string) {
+		string = string.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+		var regex = new RegExp('[\\?&]' + string + '=([^&#]*)'),
+				results = regex.exec(location.search);
+		return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ''));
+	}
+
+	// Show bootstrap modal on load
+	// If the modal id="terms", you can show it on page load by appending `?modal=terms` to the URL
+	var modalString = queryStrip('modal'),
+			modalToShow = '#' + modalString;
+	if (modalString !== '') {
+		$(modalToShow).modal('show');
+	}
+
 	/*
 	if(window.location.hash){
 		var target = window.location.hash;
@@ -659,26 +676,6 @@ $(document).ready(function() {
 	});
 
 	/* for the -30- column, using handlebars */
-	/*data = [
-		{
-			"firstName": "paulina",
-			"name": "paulina lei",
-			"content": "PLEASE WORK",
-			 "img": "pauli"
-		},
-		{
-			"firstName": "chang",
-			"name": "chang liu",
-			"content": "PLEASE WORK",
-			 "img": "changi"
-		},
-		{
-			"firstName": "howard",
-			"name": "howard huang",
-			"content": "PLEASE WORK",
-			 "img": "howie"
-		}
- 	];*/
 
 	$.ajax({
 		    dataType: "json",
@@ -707,7 +704,7 @@ $(document).ready(function() {
 			event.preventDefault();
 			var target = $(this).attr("data-target");
 			var href = $(this).attr("href");
-			window.location.href = href;
+			window.location.window = href;
 			$(target).modal("");
 	});
 
