@@ -52,7 +52,7 @@ $(document).ready(function() {
 	$('.center').slick({
 	  centerMode: true,
 	  centerPadding: '60px',
-	  slidesToShow: 3, //should we do like one item at a time? bc imgs r hella small
+	  slidesToShow: 1,
 	  dots: true,
 	  //uncomment later
 	  //autoplay: true,
