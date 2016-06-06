@@ -46,6 +46,10 @@ body{
   color: #204e91;
 }
 
+#daily-bruin-link img{
+  height: 40px;
+}
+
 #weather-date{
   float: right;
   text-decoration: none;
@@ -81,19 +85,26 @@ body{
 
 #header-content-text{
   display: inline;
-  font-family: 	Times New Roman Georgia;
+  font-family: Futura,Trebuchet MS,Arial,sans-serif;
   font-size: 30px;
 }
 
-#ucla-logo{
+#daily-bruin-title{
+  font-weight: 900;
+  font-size: 1.5em;
+  letter-spacing: -1px;
+}
+
+#DB-logo{
   height: 67px;
   text-indent: -9999px;
-  width: 154px;
+  width: 67px;
 }
 
 .nav-bar-container{
   width: 100%;
   margin: 0px;
+  margin-top: 60px;
 }
 
 #nav-bar{
