@@ -179,12 +179,12 @@ $(document).ready(function() {
 	      var section_hash = {
 	      	"A&E" : "Ae",
 	      	"News" : "Ne",
-	      	"Sports" : "Sp", 
+	      	"Sports" : "Sp",
 	      	"Opinion" : "Op",
 	      	"Photo" : "Ph",
 	      	"Video" : "Vi",
 	      	"Online" : "On",
-	      	"Radio" : "Ra", 
+	      	"Radio" : "Ra",
 	      	"Blog" : "Bl"
 	      }
 
@@ -685,8 +685,7 @@ $(document).ready(function() {
 		    url: "https://spreadsheets.google.com/feeds/list/112kjLo2XgMZreb82sGYjVVPocq9Q1ZSGgsaCUS4-Kwg/od6/public/values?alt=json",
 				success: function(data) {
 						data = data.feed.entry;
-						console.log(data);
-						
+
 						// Grab the template script
 						var theTemplateScript = $("#modal-template").html();
 
