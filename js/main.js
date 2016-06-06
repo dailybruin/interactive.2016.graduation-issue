@@ -194,10 +194,7 @@ $(document).ready(function() {
 
 	      var template = Handlebars.compile(source);
 	      data = data.feed.entry;
-
-	      for (let i = 0; i < data.length; i++) {
-	      	// console.log(data[i]);
-	      }
+	      
 	      var res = template(data);
 
 	      $('#og-grid').html(res);
