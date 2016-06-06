@@ -394,7 +394,7 @@ $(document).ready(function() {
 	      			// create Preview structure:
 	      			this.$title = $( '<h3></h3>' );
 	      			this.$description = $( '<p></p>' );
-	      			this.$href = $( '<a href="#">Visit website</a>' );
+	      			this.$href = $( '<a href="#">Read More</a>' );
 	      			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 	      			this.$loading = $( '<div class="og-loading"></div>' );
 	      			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
@@ -634,9 +634,8 @@ $(document).ready(function() {
 	  centerPadding: '60px',
 	  slidesToShow: 1,
 	  dots: true,
-	  //uncomment later
-	  //autoplay: true,
-	  //autoplaySpeed: 2000,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
 	  responsive: [
 	  {
 	    breakpoint: 768,
