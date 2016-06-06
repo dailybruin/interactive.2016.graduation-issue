@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/slick-theme.css">
 
   <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:300,500,600' rel='stylesheet' type='text/css'>
   <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
@@ -28,10 +29,11 @@
     </div>
     <div id="header" class="row">
       <div id="header-content" class="container">
-        <img src="img/ucla-white-logo.png" id="ucla-logo" />
-        <p id="header-content-text">
-          OurUCLA
-        </p>
+				<div class="row container">
+					<p id="header-content-text">
+						<i id="daily-bruin-title">DAILY BRUIN</i> OurUCLA
+					</p>
+				</div>
         <div class="row nav-bar-container">
           <ul id="nav-bar">
             <li class="inline"><a href="#section1">Featured</a></li> |
@@ -60,11 +62,15 @@
 	        <div class="center">
             <div class="content">
               <!--ae-->
-              <a href="http://dailybruin.com/2016/06/05/graduating-film-student-doubles-as-rotc-midshipman-hip-hop-dancer/"/><img src="http://dailybruin.com/images/2016/06/web.ae_.semana.gradissue.picB_.HY_.jpg"/></a>
+              <div class="image">
+                <img src="http://dailybruin.com/images/2016/06/web.ae_.semana.gradissue.picB_.HY_.jpg"/>
+                <h2><span><a href="http://dailybruin.com/2016/06/05/graduating-film-student-doubles-as-rotc-midshipman-hip-hop-dancer/"/>Graduating film student doubles as ROTC midshipman, hip-hop dancer</a></span></h2> 
+              </div>
+
             </div>
             <div class="content">
             <!--opinion-->
-              <a href="http://dailybruin.com/2016/06/05/abhishek-shetty-kang-must-reach-more-students-if-he-wants-to-improve-campus-equity/"><img src="http://dailybruin.com/images/2016/06/web.shetty.kang_.MB_.jpg"/></a>
+              <a href="http://dailybruin.com/2016/06/05/abhishek-shetty-kang-must-reach-more-students-if-he-wants-to-improve-campus-equity/"><img src="http://dailybruin.com/images/2016/06/web.shetty.kang_.MB_.jpg"/></a>   
             </div>
             <div class="content">
               <!--sports-->
@@ -92,7 +98,6 @@
             <button class="btn btn-default" data-filter="photo">Photo</button>
             <button class="btn btn-default" data-filter="video">Video</button>
 	          <button class="btn btn-default" data-filter="radio">Radio</button>
-            <button class="btn btn-default" data-filter="online">Online</button>
 	          <button class="btn btn-default" data-filter="blog">Blog</button>
 	        </div>
 
@@ -135,7 +140,8 @@
   <script id="modal-template" type="text/x-handlebars-template">
 	{{#each .}}
 		<a data-toggle="modal" data-target="#{{@index}}" class="modal-link" href="#{{firstName}}" id="{{firstName}}">
-			<img src="{{gsx$mugs.$t}}" class="thumb"/>
+			<div style="width: 120px; height: 120px; background: url('{{gsx$mugs.$t}}') top; display: inline-block;"></div>
+      <!-- <img src="{{gsx$mugs.$t}}" class="thumb"/> -->
 		</a>
 		<div class="modal fade" id="{{@index}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-lg">
