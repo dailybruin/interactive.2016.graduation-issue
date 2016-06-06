@@ -15,7 +15,7 @@ body{
 =================*/
 
 #page-wrap{
-  font-family: ProximaNova, Verdana, sans-serif;
+  font-family: "Proxima Nova", sans-serif !important;
   font-size: 1.3em;
   line-height: 81.5%;
   font-weight: 400;
