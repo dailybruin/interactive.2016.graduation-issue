@@ -69,7 +69,7 @@ body{
 #weather-date{
   float: right;
   text-decoration: none;
-  line-height: 27px;
+  line-height: 32px;
   position: relative;
   margin-bottom: 0px;
   color: #204e91;
@@ -101,7 +101,7 @@ body{
 
 #header-content-text{
   display: inline;
-  font-family: Futura,Trebuchet MS,Arial,sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   font-size: 30px;
 }
 
@@ -312,6 +312,41 @@ footer {
   line-height: 1.3em;
   font-size: 18px;
 }
+
+@media only screen and (max-width: 467px) {
+  #weather-date {
+    display: none;
+
+  }
+
+  #top-bar-content {
+    text-align: center;
+  }
+
+  a#daily-bruin-link {
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #daily-bruin-title{
+    font-size: 1.2em;
+    padding-left: 20px;
+  }
+
+  ul#nav-bar {
+    font-size: 0.9em;
+  }
+
+  #top-bar-content {
+    padding-left: 30px; 
+    padding-right: 30px;
+  }
+  #weather-date {
+    padding: 0;
+  }
+}
+
 
 @media only screen and (min-width: 990px) and (max-width: 1200px) {
   #slider-wrapper {
