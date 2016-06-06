@@ -569,6 +569,23 @@ $(document).ready(function() {
 	});
 
 	//some deeplinking
+
+		// queryStrip
+	function queryStrip(string) {
+		string = string.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+		var regex = new RegExp('[\\?&]' + string + '=([^&#]*)'),
+				results = regex.exec(location.search);
+		return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ''));
+	}
+
+	// Show bootstrap modal on load
+	// If the modal id="terms", you can show it on page load by appending `?modal=terms` to the URL
+	var modalString = queryStrip('modal'),
+			modalToShow = '#' + modalString;
+	if (modalString !== '') {
+		$(modalToShow).modal('show');
+	}
+
 	/*
 	if(window.location.hash){
 		var target = window.location.hash;
@@ -659,26 +676,6 @@ $(document).ready(function() {
 	});
 
 	/* for the -30- column, using handlebars */
-	/*data = [
-		{
-			"firstName": "paulina",
-			"name": "paulina lei",
-			"content": "PLEASE WORK",
-			 "img": "pauli"
-		},
-		{
-			"firstName": "chang",
-			"name": "chang liu",
-			"content": "PLEASE WORK",
-			 "img": "changi"
-		},
-		{
-			"firstName": "howard",
-			"name": "howard huang",
-			"content": "PLEASE WORK",
-			 "img": "howie"
-		}
- 	];*/
 
 	$.ajax({
 		    dataType: "json",
@@ -707,7 +704,7 @@ $(document).ready(function() {
 			event.preventDefault();
 			var target = $(this).attr("data-target");
 			var href = $(this).attr("href");
-			window.location.href = href;
+			window.location.window = href;
 			$(target).modal("");
 	});
 
