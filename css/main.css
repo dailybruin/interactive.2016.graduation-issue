@@ -144,6 +144,31 @@ body{
 .sports-illo img {
   bottom: 0;
 }
+
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.image h2 {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 500px;
+}
+
+.image h2 span {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  color: black;
+  background: white;
+  text-transform: uppercase;
+  padding: 10px;
+  line-height: 120%;
+}
+.image h2 span a {
+  text-decoration: none;
+}
 /*=================
   -30- COLUMNS
 =================*/
