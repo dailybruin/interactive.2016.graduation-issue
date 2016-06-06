@@ -43,41 +43,41 @@
     <div id="content-wrapper" class="container">
       <div id="content" class="row">
         <h1>Grad Issue 2016:</h1>
-        <p>Will the editor in chief write a little message like he did for grad issue 2014? If he does we could put it here.</p>
-        <hr />
+        <div class="tanners-letter">
+          <p>Fear swept across campus Wednesday, one BruinAlert at a time. It soon spread, sending terror through parents, siblings and friends worldwide.</p>
+          <p>An ordinary day turned tragic.</p>
+          <p>Through the pain, though, we now try to return to some sort of normalcy &ndash; if that's what you can call it. We come together and bow our heads in silence. We call our parents and hold onto each moment more than we did just weeks before, reminded of life's fleeting quality.</p>
+          <p>For many of us, strength comes from unity.</p>
+          <p>Within this Graduation Issue, we hope to bring you the best of the past year &ndash; the stories, people and moments that shaped our collective UCLA experience. Through each of our ups and downs, we recognize how our brief stops in Westwood are so impactful, forever tying us together.</p>
+          <p>This edition remembers professor William Klug and shows the fortitude of a community in solidarity.</p>
+          <p>This is about our school, our home.</p>
+          <p>Our UCLA.</p>
+        </div>
+      <hr />
 				<div id="section1">
 					<h1>Featured</h1>
 	        <div class="center">
-	          <div class="content red">
-	              <a href="http://dailybruin.com/" target="_blank"><img src="img/howie.jpg"/></a>
-	              <div id="inner-box">
-	                <p id="overlay-headline">Featured headline here</p>
-	              </div>
-	          </div>
-	          <div class="content yellow">
-	              <img src="img/changi.jpg"/>
-	              <div id="inner-box">
-	              </div>
-	          </div>
-	          <div class="content blue">
-	              <img src="img/howie.jpg"/>
-	              <div id="inner-box">
-	              </div>
-	          </div>
-	          <div class="content darkblue">
-	              <img src="img/changi.jpg"/>
-	              <div id="inner-box">
-	              </div>
-	          </div>
-	          <div class="content purple">
-	              <img src="img/howie.jpg"/>
-	              <div id="inner-box">
-	              </div>
-	          </div>
-	          <div class="content black">
-	              <img src="img/changi.jpg"/>
-	              <div id="inner-box">
-	              </div>
+            <div class="content">
+              <!--ae-->
+              <a href="http://dailybruin.com/2016/06/05/graduating-film-student-doubles-as-rotc-midshipman-hip-hop-dancer/"/><img src="http://dailybruin.com/images/2016/06/web.ae_.semana.gradissue.picB_.HY_.jpg"/></a>
+            </div>
+            <div class="content">
+            <!--opinion-->
+              <a href="http://dailybruin.com/2016/06/05/abhishek-shetty-kang-must-reach-more-students-if-he-wants-to-improve-campus-equity/"><img src="http://dailybruin.com/images/2016/06/web.shetty.kang_.MB_.jpg"/></a>    
+            </div>
+            <div class="content">
+              <!--sports-->
+              <div class="sports-illo">
+                <a href="http://dailybruin.com/2016/06/05/baseball-seniors-three-years-after-historic-2013-college-world-series-win/"><img src="http://dailybruin.com/images/2016/06/baseball-2013-edit.jpg"/></a>
+              </div>
+            </div>
+            <div class="content">
+              <!--news-->
+              <a href="http://dailybruin.com/2016/06/05/student-receives-award-for-guiding-incoming-students-using-facebook/"><img src="http://dailybruin.com/images/2016/06/web.ns_.hyunh_.gradissue.PS_.jpg"/></a>
+            </div>
+	          <div class="content">
+              <!--blog-->
+	             <a href="http://dailybruin.com/2016/06/05/the-changing-campus-landscape-2016s-fallen-trees/" target="_blank"><img src="http://dailybruin.com/images/2016/06/web.fallentree.MB_.jpg"/></a>
 	          </div>
 	        </div>
 
@@ -89,9 +89,10 @@
 	          <button class="btn btn-default" data-filter="ae">A&amp;E</button>
 	          <button class="btn btn-default" data-filter="news">News</button>
 	          <button class="btn btn-default" data-filter="opinion">Opinion</button>
-            <button class="btn btn-default" data-filter="photo">Video</button>
-	          <button class="btn btn-default" data-filter="video">Video</button>
+            <button class="btn btn-default" data-filter="photo">Photo!!! (NEED COLOR)</button>
+            <button class="btn btn-default" data-filter="video">Video</button>
 	          <button class="btn btn-default" data-filter="radio">Radio</button>
+            <button class="btn btn-default" data-filter="online">Online!!! (NEED COLOR)</button>
 	          <button class="btn btn-default" data-filter="blog">Blog!!! (NEED COLOR)</button>
 	        </div>
 
@@ -100,11 +101,11 @@
               <script id="item-template" type="text/x-handlebars-template">
               {{#each .}}
                 <li class="og-grid-item">
-                  <a class="{{lc this.gsx$section.$t}}" href="{{this.gsx$articleurl.$t}}" data-largesrc="{{this.gsx$mainimageurl.$t}}" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <a {{#if this.gsx$mainimageurl.$t}} style="background: url('{{this.gsx$mainimageurl.$t}}') center; background-size: cover;" {{/if}} class="{{lc this.gsx$section.$t}}" href="{{this.gsx$articleurl.$t}}" data-largesrc="{{this.gsx$mainimageurl.$t}}" data-title="{{this.gsx$articleheadline.$t}}" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
                     <div class="og-grid-item-overlay">
-                      <h3 class="name">Mercury</h3>
-                      <p class="symbol">Sp</p>
-                      <p class="weight">200.59</p>
+                      <h3 class="name">{{this.gsx$authors.$t}}</h3>
+                      <p class="symbol">{{sec this.gsx$section.$t}}</p>
+                      <p class="weight">{{this.gsx$articleheadline.$t}}</p>
                     </div>
                   </a>
                 </li>

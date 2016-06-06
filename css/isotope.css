@@ -89,9 +89,9 @@ body {
 
 /* ---- .element-item ---- */
 /* line 82, ../scss/isotope.scss */
-.og-grid-item .sports, .og-grid-item .opinion, .og-grid-item .blog, .og-grid-item .ae, .og-grid-item .radio, .og-grid-item .news, .og-grid-item .video, .og-grid-item .photo {
+.og-grid-item .sports, .og-grid-item .opinion, .og-grid-item .blog, .og-grid-item .ae, .og-grid-item .radio, .og-grid-item .news, .og-grid-item .video, .og-grid-item .photo, .og-grid-item .online {
   background: url("../img/howie.jpg") center;
-  background-size: 100%;
+  background-size: cover;
   width: 250px;
   height: 250px;
 }
@@ -107,26 +107,31 @@ body {
 }
 
 /* line 113, ../scss/isotope.scss */
-.video .og-grid-item-overlay {
+.photo .og-grid-item-overlay {
   background: rgba(84, 89, 90, 0.6);
 }
 
 /* line 114, ../scss/isotope.scss */
+.video .og-grid-item-overlay {
+  background: rgba(84, 89, 90, 0.6);
+}
+
+/* line 115, ../scss/isotope.scss */
 .ae .og-grid-item-overlay {
   background: rgba(223, 208, 93, 0.6);
 }
 
-/* line 115, ../scss/isotope.scss */
+/* line 116, ../scss/isotope.scss */
 .radio .og-grid-item-overlay {
   background: rgba(48, 15, 36, 0.6);
 }
 
-/* line 116, ../scss/isotope.scss */
+/* line 117, ../scss/isotope.scss */
 .news .og-grid-item-overlay {
   background: rgba(0, 81, 129, 0.6);
 }
 
-/* line 118, ../scss/isotope.scss */
+/* line 119, ../scss/isotope.scss */
 .og-grid-item-overlay {
   width: 100%;
   height: 100%;
@@ -138,7 +143,7 @@ body {
   -o-transition: opacity 350ms ease-in-out;
   transition: opacity 350ms ease-in-out;
 }
-/* line 125, ../scss/isotope.scss */
+/* line 126, ../scss/isotope.scss */
 .og-grid-item-overlay .name {
   position: absolute;
   left: 10px;
@@ -149,14 +154,14 @@ body {
   font-weight: normal;
   color: white;
 }
-/* line 135, ../scss/isotope.scss */
+/* line 136, ../scss/isotope.scss */
 .og-grid-item-overlay .number {
   position: absolute;
   right: 8px;
   top: 5px;
   color: white;
 }
-/* line 141, ../scss/isotope.scss */
+/* line 142, ../scss/isotope.scss */
 .og-grid-item-overlay .weight {
   color: white;
   position: absolute;
@@ -165,7 +170,7 @@ body {
   font-size: 12px;
   line-height: 0px;
 }
-/* line 149, ../scss/isotope.scss */
+/* line 150, ../scss/isotope.scss */
 .og-grid-item-overlay .symbol {
   position: absolute;
   left: 10px;

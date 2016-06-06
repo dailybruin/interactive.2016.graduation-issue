@@ -172,8 +172,24 @@ $(document).ready(function() {
 	      var source   = $("#item-template").html();
 
 	      Handlebars.registerHelper('lc', function(s) {
-	      	console.log(s);
+	      	if (s == "A&E") return "ae";
 	        return s.toLowerCase();
+	      });
+
+	      var section_hash = {
+	      	"A&E" : "Ae",
+	      	"News" : "Ne",
+	      	"Sports" : "Sp", 
+	      	"Opinion" : "Op",
+	      	"Photo" : "Ph",
+	      	"Video" : "Vi",
+	      	"Online" : "On",
+	      	"Radio" : "Ra", 
+	      	"Blog" : "Bl"
+	      }
+
+	      Handlebars.registerHelper('sec', function(s) {
+	        return section_hash[s];
 	      });
 
 	      var template = Handlebars.compile(source);
@@ -616,7 +632,7 @@ $(document).ready(function() {
 	$('.center').slick({
 	  centerMode: true,
 	  centerPadding: '60px',
-	  slidesToShow: 3, //should we do like one item at a time? bc imgs r hella small
+	  slidesToShow: 1,
 	  dots: true,
 	  //uncomment later
 	  //autoplay: true,
