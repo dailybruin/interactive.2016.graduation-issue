@@ -587,34 +587,6 @@ $(document).ready(function() {
 	  });
 	});
 
-	//some deeplinking
-
-		// queryStrip
-	function queryStrip(string) {
-		string = string.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-		var regex = new RegExp('[\\?&]' + string + '=([^&#]*)'),
-				results = regex.exec(location.search);
-		return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ''));
-	}
-
-	// Show bootstrap modal on load
-	// If the modal id="terms", you can show it on page load by appending `?modal=terms` to the URL
-	var modalString = queryStrip('modal'),
-			modalToShow = '#' + modalString;
-	if (modalString !== '') {
-		$(modalToShow).modal('show');
-	}
-
-	/*
-	if(window.location.hash){
-		var target = window.location.hash;
-		console.log(target);
-		$("html, body").scrollTop($(target).offset());
-		$(".modal").modal("show");
-		$(target).modal("show");
-	}*/
-
-
 	// bind filter button click
 	$('#filters').on( 'click', 'button', function() {
 	  var filterValue = $( this ).attr('data-filter');
@@ -743,9 +715,13 @@ $(document).ready(function() {
 	});
 
 	// deep linking modals
+	var base_og = "http://dailybruin.com/img/db_logo.svg";
+
 	$(document).on('show.bs.modal', function (e) {
 		var modal = $(e.target);
 		location.replace(mainURL+'#'+modal[0].id);
+		console.log($('meta[property="og:image"]').attr('content'));
+		$('meta[property="og:image"]').attr('content', modal.data('pic'));
 
 	});
 
@@ -754,6 +730,7 @@ $(document).ready(function() {
 	$(document).on('hidden.bs.modal', function (e) {
 		var modal = $(e.target);
 		var state = { "canBeAnything": true};
+		$('meta[property="og:image"]').attr('content', base_og);
 		history.pushState(state, document.title, mainURL)
 	});
 
