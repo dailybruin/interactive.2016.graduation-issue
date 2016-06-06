@@ -634,9 +634,8 @@ $(document).ready(function() {
 	  centerPadding: '60px',
 	  slidesToShow: 1,
 	  dots: true,
-	  //uncomment later
-	  //autoplay: true,
-	  //autoplaySpeed: 2000,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
 	  responsive: [
 	  {
 	    breakpoint: 768,
