@@ -5,6 +5,21 @@ body{
   margin: 0px;
 }
 
+#content > div.tanners-letter > h1 {
+  margin-top: 0 !important;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
+#section1 > h2,
+#section2 > h2,
+#section3 > h2 {
+  margin-top: 0 !important;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
+
 /*=================
       Classes
 =================*/
@@ -90,9 +105,10 @@ body{
 }
 
 #daily-bruin-title{
-  font-weight: 900;
+  font-weight: 600;
   font-size: 1.5em;
   letter-spacing: -1px;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 #DB-logo{
@@ -135,7 +151,7 @@ body{
 }
 /*tanners letter*/
 .tanners-letter {
-  line-height: 150%;
+  line-height: 110%;
 }
 
 /*carousel styling*/
@@ -213,10 +229,40 @@ body{
   -30- COLUMNS
 =================*/
 
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
 .thumb{
   width: 100px;
 }
 
 .modal-thumb{
   width: 200px;
+}
+
+#slider-wrapper {
+  height: 500px; overflow: hidden; padding: 40px;
+}
+
+
+@media only screen and (min-width: 990px) and (max-width: 1200px) {
+  #slider-wrapper {
+    height: 400px;
+  }
+
+  #slider-wrapper > div > div > div > div.content.slick-slide.slick-current.slick-active.slick-center > div {
+    height: 400px !important;
+  }
+}
+
+@media only screen and (min-width: 778px) and (max-width: 990px) {
+  #slider-wrapper {
+    height: 300px;
+  }
+  #slider-wrapper > div > div > div > div.content.slick-slide.slick-current.slick-active.slick-center > div {
+    height: 400px !important;
+  }
 }
