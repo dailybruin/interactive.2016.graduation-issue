@@ -679,7 +679,7 @@ $(document).ready(function() {
 	  centerPadding: '140px',
 	  slidesToShow: 1,
 	  dots: true,
-	 // autoplay: true,
+	  //autoplay: true,
 	  //autoplaySpeed: 2000,
 	  responsive: [
 	  {
