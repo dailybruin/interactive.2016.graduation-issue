@@ -211,6 +211,25 @@ $(document).ready(function() {
 	        $('.og-grid-item-overlay').css('opacity', 0);
 	      })
 
+	      /*magnific popup*/
+	      $('.video').magnificPopup({
+	        type: 'iframe',
+	        iframe: {
+	      	    	markup: '<div class="mfp-iframe-scaler">'+
+	                  		'<div class="mfp-close"></div>'+
+	                  		'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+	                  		'</div>', 
+	              patterns: {
+	                  youtube: {
+	      	              index: 'youtube.com/', 
+	      	              id: 'v=', 
+	      	              src: '//www.youtube.com/embed/%id%?autoplay=1' 
+	      		        }
+	      		     },
+	      		     srcAction: 'iframe_src', 
+	           }
+	      });
+
 	      var Grid = (function() {
 
 	      	// list of items
@@ -630,34 +649,6 @@ $(document).ready(function() {
 		});
 	});
 
-	/*magnific popup*/
-	$('.video').magnificPopup({
-		type: 'iframe',
-
-
-		iframe: {
-			markup: '<div class="mfp-iframe-scaler">'+
-			'<div class="mfp-close"></div>'+
-			'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-			'<div class="mfp-title"></div>'+
-			'</div>',
-			patterns: {
-				youtube: {
-      				index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
-
-      				id: 'v/', // String that splits URL in a two parts, second part should be %id%
-				      // Or null - full URL will be returned
-      				  // Or a function that should return %id%, for example:
-				      // id: function(url) { return 'parsed id'; }
-
-      				//src: $(this).attr("href") // URL that will be set as a source for iframe.
-  				}
-			},
-
-  			srcAction: 'iframe_src'// Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
-  		}
-  	});
-
 	/*for updating date*/
 	function updateClock() {
 		var now = new Date(),
@@ -745,4 +736,6 @@ $(document).ready(function() {
 		var state = { "canBeAnything": true};
 		history.pushState(state, document.title, mainURL)
 	});
+
+	
 })
