@@ -177,15 +177,15 @@ $(document).ready(function() {
 	      });
 
 	      var section_hash = {
-	      	"A&E" : "Ae",
-	      	"News" : "Ne",
-	      	"Sports" : "Sp",
-	      	"Opinion" : "Op",
-	      	"Photo" : "Ph",
-	      	"Video" : "Vi",
-	      	"Online" : "On",
-	      	"Radio" : "Ra",
-	      	"Blog" : "Bl"
+	      	"A&E" : "A",
+	      	"News" : "N",
+	      	"Sports" : "S",
+	      	"Opinion" : "O",
+	      	"Photo" : "P",
+	      	"Video" : "V",
+	      	"Online" : "O",
+	      	"Radio" : "R",
+	      	"Blog" : "B"
 	      }
 
 	      Handlebars.registerHelper('sec', function(s) {
