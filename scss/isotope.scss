@@ -79,9 +79,9 @@ body {
 
 /* ---- .element-item ---- */
 .og-grid-item {
-  .sports, .opinion, .blog, .ae, .radio, .news, .video {
+  .sports, .opinion, .blog, .ae, .radio, .news, .video, .photo, .online {
     background: url('../img/howie.jpg') center;
-    background-size: 100%;
+    background-size: cover;
     width: 250px;
     height: 250px;
   }
@@ -110,6 +110,7 @@ body {
 
 .sports   .og-grid-item-overlay { background: rgba(129,162,213,0.6); }
 .opinion  .og-grid-item-overlay { background: rgba(210,35,42,0.6);   }
+.photo    .og-grid-item-overlay { background: rgba(84,89,90,0.6);    }
 .video    .og-grid-item-overlay { background: rgba(84,89,90,0.6);    }
 .ae       .og-grid-item-overlay { background: rgba(223,208,93,0.6);  }
 .radio    .og-grid-item-overlay { background: rgba(48,15,36,0.6);    }
