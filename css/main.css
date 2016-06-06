@@ -159,6 +159,7 @@ body{
 .image {
   position: relative;
   width: 100%;
+  height: auto;
 }
 
 .image h3 {
@@ -201,6 +202,13 @@ body{
 
 .image h2 div a {
   text-decoration: none;
+}
+
+/*magnific popup*/
+.mfp-title {
+  position:absolute;
+  color: #FFF;
+  background: red;
 }
 
 /*=================
