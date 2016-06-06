@@ -676,23 +676,14 @@ $(document).ready(function() {
 	/*slick*/
 	$('.center').slick({
 	  centerMode: true,
-	  centerPadding: '60px',
+	  centerPadding: '140px',
 	  slidesToShow: 1,
 	  dots: true,
 	 // autoplay: true,
 	  //autoplaySpeed: 2000,
 	  responsive: [
 	  {
-	    breakpoint: 768,
-	    settings: {
-	      arrows: false,
-	      centerMode: true,
-	      centerPadding: '40px',
-	      slidesToShow: 3
-	    }
-	  },
-	  {
-	    breakpoint: 480,
+	    breakpoint: 990,
 	    settings: {
 	      arrows: false,
 	      centerMode: true,
@@ -713,6 +704,10 @@ $(document).ready(function() {
 
 						// Grab the template script
 						var theTemplateScript = $("#modal-template").html();
+
+						Handlebars.registerHelper('fn', function(s) {
+			      	return s.split(' ')[0];
+			      });
 
 						// Compile the template
 						var theTemplate = Handlebars.compile(theTemplateScript);
@@ -736,4 +731,18 @@ $(document).ready(function() {
 			$(target).modal("");
 	});
 
+	// deep linking modals
+	$(document).on('show.bs.modal', function (e) {
+		var modal = $(e.target);
+		location.replace(mainURL+'#'+modal[0].id);
+
+	});
+
+	var mainURL="main.html"
+
+	$(document).on('hidden.bs.modal', function (e) {
+		var modal = $(e.target);
+		var state = { "canBeAnything": true};
+		history.pushState(state, document.title, mainURL)
+	});
 })
