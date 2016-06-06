@@ -185,7 +185,7 @@ $(document).ready(function() {
 	      	"Video" : "V",
 	      	"Online" : "O",
 	      	"Radio" : "R",
-	      	"Blog" : "B"
+	      	"Blog" : "Q"
 	      }
 
 	      Handlebars.registerHelper('sec', function(s) {
