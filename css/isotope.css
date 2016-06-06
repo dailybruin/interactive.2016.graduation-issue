@@ -87,8 +87,8 @@
 .og-grid-item .sports, .og-grid-item .opinion, .og-grid-item .blog, .og-grid-item .ae, .og-grid-item .radio, .og-grid-item .news, .og-grid-item .video, .og-grid-item .photo, .og-grid-item .online {
   background: url("../img/howie.jpg") center;
   background-size: cover;
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
 }
 /* line 85, ../scss/isotope.scss */
 .og-grid-item a {
