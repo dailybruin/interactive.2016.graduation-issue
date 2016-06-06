@@ -172,8 +172,23 @@ $(document).ready(function() {
 	      var source   = $("#item-template").html();
 
 	      Handlebars.registerHelper('lc', function(s) {
-	      	console.log(s);
 	        return s.toLowerCase();
+	      });
+
+	      var section_hash = {
+	      	"A&E" : "Ae",
+	      	"News" : "Ne",
+	      	"Sports" : "Sp", 
+	      	"Opinion" : "Op",
+	      	"Photo" : "Ph",
+	      	"Video" : "Vi",
+	      	"Online" : "On",
+	      	"Radio" : "Ra", 
+	      	"Blog" : "Bl"
+	      }
+
+	      Handlebars.registerHelper('sec', function(s) {
+	        return section_hash[s];
 	      });
 
 	      var template = Handlebars.compile(source);

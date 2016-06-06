@@ -89,9 +89,10 @@
 	          <button class="btn btn-default" data-filter="ae">A&amp;E</button>
 	          <button class="btn btn-default" data-filter="news">News</button>
 	          <button class="btn btn-default" data-filter="opinion">Opinion</button>
-            <button class="btn btn-default" data-filter="photo">Video</button>
-	          <button class="btn btn-default" data-filter="video">Video</button>
+            <button class="btn btn-default" data-filter="photo">Photo!!! (NEED COLOR)</button>
+            <button class="btn btn-default" data-filter="video">Video</button>
 	          <button class="btn btn-default" data-filter="radio">Radio</button>
+            <button class="btn btn-default" data-filter="online">Online!!! (NEED COLOR)</button>
 	          <button class="btn btn-default" data-filter="blog">Blog!!! (NEED COLOR)</button>
 	        </div>
 
@@ -100,11 +101,11 @@
               <script id="item-template" type="text/x-handlebars-template">
               {{#each .}}
                 <li class="og-grid-item">
-                  <a class="{{lc this.gsx$section.$t}}" href="{{this.gsx$articleurl.$t}}" data-largesrc="{{this.gsx$mainimageurl.$t}}" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <a {{#if this.gsx$mainimageurl.$t}} style="background: url('{{this.gsx$mainimageurl.$t}}') center; background-size: cover;" {{/if}} class="{{lc this.gsx$section.$t}}" href="{{this.gsx$articleurl.$t}}" data-largesrc="{{this.gsx$mainimageurl.$t}}" data-title="{{this.gsx$articleheadline.$t}}" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
                     <div class="og-grid-item-overlay">
-                      <h3 class="name">Mercury</h3>
-                      <p class="symbol">Sp</p>
-                      <p class="weight">200.59</p>
+                      <h3 class="name">{{this.gsx$authors.$t}}</h3>
+                      <p class="symbol">{{sec this.gsx$section.$t}}</p>
+                      <p class="weight">{{this.gsx$articleheadline.$t}}</p>
                     </div>
                   </a>
                 </li>
