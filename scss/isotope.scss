@@ -87,13 +87,15 @@
   }
 }
 
-.sports   .og-grid-item-overlay { background: rgba(129,162,213,0.6); }
-.opinion  .og-grid-item-overlay { background: rgba(210,35,42,0.6);   }
-.photo    .og-grid-item-overlay { background: rgba(84,89,90,0.6);    }
-.video    .og-grid-item-overlay { background: rgba(84,89,90,0.6);    }
-.ae       .og-grid-item-overlay { background: rgba(223,208,93,0.6);  }
-.radio    .og-grid-item-overlay { background: rgba(48,15,36,0.6);    }
-.news     .og-grid-item-overlay { background: rgba(0,81,129,0.6)     }
+.sports   .og-grid-item-overlay { background: rgba(129,162,213,0.75); }
+.opinion  .og-grid-item-overlay { background: rgba(210,35,42,0.75); }
+.photo    .og-grid-item-overlay { background: rgba(198,150,64,0.75); }
+.video    .og-grid-item-overlay { background: rgba(84,89,90,0.75); }
+.ae       .og-grid-item-overlay { background: rgba(223,208,93,0.75); }
+.radio    .og-grid-item-overlay { background: rgba(48,15,36,0.75); }
+.news     .og-grid-item-overlay { background: rgba(0,81,129,0.75); }
+.blog     .og-grid-item-overlay { background: rgba(27,29,53,0.75); }
+.online   .og-grid-item-overlay { background: rgba(136,94,127,0.75); }
 
 .og-grid-item-overlay {
   font-family: "Proxima Nova", sans-serif !important;
