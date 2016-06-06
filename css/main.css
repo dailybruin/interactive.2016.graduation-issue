@@ -166,13 +166,13 @@ body{
   top: 45%;
   left: 0;
   width: 500px;
+  background: white;
 }
 
 .image h2 span {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   color: black;
-  background: white;
   text-transform: uppercase;
   padding: 10px;
   line-height: 120%;
