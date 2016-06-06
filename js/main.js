@@ -172,6 +172,7 @@ $(document).ready(function() {
 	      var source   = $("#item-template").html();
 
 	      Handlebars.registerHelper('lc', function(s) {
+	      	if (s == "A&E") return "ae";
 	        return s.toLowerCase();
 	      });
 
