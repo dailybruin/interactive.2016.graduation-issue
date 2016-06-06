@@ -34,7 +34,8 @@ body{
   font-size: 1.3em;
   line-height: 81.5%;
   font-weight: 400;
-  background: #d1e8f8 url("../img/mainpage-background.jpg") repeat;
+  /*background: #d1e8f8 url("../img/mainpage-background.jpg") repeat;*/
+  background-color: #ADD8E6;
   min-height: 2000px /* REMOVE THIS LATER */
 }
 
