@@ -25,8 +25,8 @@ var type2 = function(){
     // character for cursor
     cursorChar: "|",
     callback: function(){
-      $(".logon-button").css("background-color", "yellow"); 
-      // window.location.replace("main.html");
+      $(".logon-button").css("background-color", "yellow");
+      window.location.replace("main.html");
     },
   });
 }
