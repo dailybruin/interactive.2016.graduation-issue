@@ -177,15 +177,15 @@ $(document).ready(function() {
 	      });
 
 	      var section_hash = {
-	      	"A&E" : "Ae",
-	      	"News" : "Ne",
-	      	"Sports" : "Sp",
-	      	"Opinion" : "Op",
-	      	"Photo" : "Ph",
-	      	"Video" : "Vi",
-	      	"Online" : "On",
-	      	"Radio" : "Ra",
-	      	"Blog" : "Bl"
+	      	"A&E" : "A",
+	      	"News" : "N",
+	      	"Sports" : "S",
+	      	"Opinion" : "O",
+	      	"Photo" : "P",
+	      	"Video" : "V",
+	      	"Online" : "O",
+	      	"Radio" : "R",
+	      	"Blog" : "B"
 	      }
 
 	      Handlebars.registerHelper('sec', function(s) {
@@ -394,7 +394,7 @@ $(document).ready(function() {
 	      			// create Preview structure:
 	      			this.$title = $( '<h3></h3>' );
 	      			this.$description = $( '<p></p>' );
-	      			this.$href = $( '<a href="#">Read More</a>' );
+	      			this.$href = $( '<a target="_blank" href="#">Read More</a>' );
 	      			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 	      			this.$loading = $( '<div class="og-loading"></div>' );
 	      			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );

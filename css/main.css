@@ -161,14 +161,32 @@ body{
   width: 100%;
 }
 
+.image h3 {
+  position: relative;
+  bottom: 161px;
+  width: 50%;
+  top: 45%;
+  text-align: left;
+  background: white;
+  left: 20px;
+}
+
+.image h3 div {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  color: black;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
 .image h2 {
   position: relative;
-  bottom: 300px;
-  width: 80%;
+  bottom: 160px;
+  width: 50%;
   top: 45%;
-  text-align: center;
+  text-align: left;
   background: white;
-  margin: 0 auto;
+  left: 20px;
 }
 
 .image h2 div {
@@ -184,6 +202,7 @@ body{
 .image h2 div a {
   text-decoration: none;
 }
+
 /*=================
   -30- COLUMNS
 =================*/
