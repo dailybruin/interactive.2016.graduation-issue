@@ -141,8 +141,8 @@ body{
   position: relative;
 }
 
-.sports-illo img {
-  bottom: 0;
+.sports-illo{
+  margin-top: 100px;
 }
 /*=================
   -30- COLUMNS
@@ -153,6 +153,5 @@ body{
 }
 
 .modal-thumb{
-  height: 300px;
   width: 200px;
 }
