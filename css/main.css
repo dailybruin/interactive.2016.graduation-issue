@@ -153,17 +153,23 @@ body{
 }
 
 .sports-illo{
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
-.image {
+#section1 > div > div > button.slick-prev.slick-arrow,
+#section1 > div > div > button.slick-next.slick-arrow {
+  top: 250px;
+  position: absolute;
+}
+
+/*.image {
   position: relative;
   width: 100%;
-}
+}*/
 
 .image h3 {
   position: relative;
-  bottom: 161px;
+  bottom: 180px;
   width: 50%;
   top: 45%;
   text-align: left;
@@ -181,7 +187,7 @@ body{
 
 .image h2 {
   position: relative;
-  bottom: 160px;
+  bottom: 180px;
   width: 50%;
   top: 45%;
   text-align: left;
