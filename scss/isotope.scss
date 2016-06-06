@@ -4,10 +4,36 @@
 
 #filters {
   text-align: center;
+
+  button {
+    border-radius: 16px;
+  }
+}
+
+.modal-link {
+  .wrap {
+    // background-size: 100% !important;
+    // @include vendorize(transition, background-size 350ms ease-in-out);
+    div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 1.0;
+      @include vendorize(transition, all 350ms ease-in-out);
+      @include vendorize(transform, scale(1,1));
+      @include vendorize(background-size, cover);
+    }
+  }
+  &:hover {
+    .wrap div {
+      opacity: 0.8;
+      @include vendorize(transform, scale(1.2, 1.2));
+    }
+  }
+
 }
 
 /* ---- button ---- */
-
 .button {
   display: inline-block;
   padding: 0.5em 1.0em;
