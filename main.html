@@ -101,7 +101,7 @@
               <script id="item-template" type="text/x-handlebars-template">
               {{#each .}}
                 <li class="og-grid-item">
-                  <a {{#if this.gsx$mainimageurl.$t}} style="background: url('{{this.gsx$mainimageurl.$t}}') center; background-size: cover;" {{/if}} class="{{lc this.gsx$section.$t}}" href="{{this.gsx$articleurl.$t}}" data-largesrc="{{this.gsx$mainimageurl.$t}}" data-title="{{this.gsx$articleheadline.$t}}" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+                  <a {{#if this.gsx$mainimageurl.$t}} style="background: url('{{this.gsx$mainimageurl.$t}}') center; background-size: cover;" {{/if}} class="{{lc this.gsx$section.$t}}" href="{{this.gsx$articleurl.$t}}" data-largesrc="{{this.gsx$mainimageurl.$t}}" data-title="{{this.gsx$articleheadline.$t}}" data-description="{{this.gsx$previewdescription.$t}}">
                     <div class="og-grid-item-overlay">
                       <p class="symbol">{{sec this.gsx$section.$t}}</p>
                       <p class="headline">{{this.gsx$articleheadline.$t}}</p>
