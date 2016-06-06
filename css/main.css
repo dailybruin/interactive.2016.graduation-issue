@@ -150,6 +150,9 @@ body{
     display: inline-block;
 }
 
+.dropbtn:hover {
+  color: yellow;
+}
 .dropdown-content {
     display: none;
     position: absolute;
