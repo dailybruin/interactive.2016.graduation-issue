@@ -163,6 +163,7 @@ $.fn.imagesLoaded = function( callback ) {
 
 $(document).ready(function() {
 
+
 	$(function() {
 	  $.ajax({
 	    dataType: "json",
@@ -699,6 +700,9 @@ $(document).ready(function() {
 
 						// Add the compiled html to the page
 						$('.modal-placeholder').html(theCompiledHtml);
+
+						var hash = window.location.hash;
+						$(hash).modal('show');
 				}
 	});
 
