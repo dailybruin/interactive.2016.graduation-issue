@@ -148,6 +148,7 @@ body{
 }
 
 .dropdown {
+    margin-top: 1.56px;
     position: relative;
     display: inline-block;
 }
