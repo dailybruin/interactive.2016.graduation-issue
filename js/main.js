@@ -194,7 +194,7 @@ $(document).ready(function() {
 
 	      var template = Handlebars.compile(source);
 	      data = data.feed.entry;
-	      
+
 	      var res = template(data);
 
 	      $('#og-grid').html(res);
@@ -215,15 +215,15 @@ $(document).ready(function() {
 	      	    	markup: '<div class="mfp-iframe-scaler">'+
 	                  		'<div class="mfp-close"></div>'+
 	                  		'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-	                  		'</div>', 
+	                  		'</div>',
 	              patterns: {
 	                  youtube: {
-	      	              index: 'youtube.com/', 
-	      	              id: 'v=', 
-	      	              src: '//www.youtube.com/embed/%id%?autoplay=1' 
+	      	              index: 'youtube.com/',
+	      	              id: 'v=',
+	      	              src: '//www.youtube.com/embed/%id%?autoplay=1'
 	      		        }
 	      		     },
-	      		     srcAction: 'iframe_src', 
+	      		     srcAction: 'iframe_src',
 	           }
 	      });
 
@@ -702,14 +702,7 @@ $(document).ready(function() {
 				}
 	});
 
-	//opening the modal
-	$(".modal-link").click(function(event){
-			event.preventDefault();
-			var target = $(this).attr("data-target");
-			var href = $(this).attr("href");
-			window.location.window = href;
-			$(target).modal("");
-	});
+	
 
 	// deep linking modals
 	var base_og = "http://dailybruin.com/img/db_logo.svg";
@@ -731,5 +724,5 @@ $(document).ready(function() {
 		history.pushState(state, document.title, mainURL)
 	});
 
-	
+
 })

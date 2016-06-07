@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale: 1.0" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <meta property="og:title" content="Daily Bruin | Graduation Issue 2016" />
   <meta property="og:image" content="http://dailybruin.com/img/db_logo.svg" />
   <meta property="og:description" content="UCLA's award-winning college newspaper, the Daily Bruin, reviews the 2015-2015 school year." />
@@ -39,8 +39,8 @@
     <div id="header" class="row">
       <div id="header-content" class="container">
 				<div class="row container">
-					<p id="header-content-text" style="position: relative; top: 25px;">
-						<span id="daily-bruin-title">DAILY BRUIN</span> OurUCLA
+					<p id="header-content-text">
+						<span id="daily-bruin-title">DAILY BRUIN</span> <span id="responsive">OurUCLA</span>
 					</p>
 				</div>
 				<div class="row nav-bar-container">
@@ -69,7 +69,7 @@
 			<div id="content" class="row">
 				<div class="tanners-letter" style="padding: 0px 20px 20px 20px;">
 					<h1>Graduation Issue 2016</h1>
-          <div style="padding: 0px 20px; font-size: 0.8em">
+          <div class="editor-letter">
   					<p>Fear swept across campus Wednesday, one BruinAlert at a time. It soon spread worldwide.</p>
   					<p>An ordinary day turned tragic.</p>
   					<p>Through the pain, though, we now try to return to some sort of normalcy. We come together and bow our heads in silence. We call our parents and hold onto each moment more than we did just weeks before.</p>
@@ -81,7 +81,7 @@
           </div>
 				</div>
 				<hr />
-				<div id="section1" style="padding: 20px;">
+				<div id="section1">
 					<h2>Featured</h2>
           <div id="slider-wrapper">
             <div class="center">
@@ -161,7 +161,7 @@
           </div>
         </div>
 
-				<div id="section2" style="padding: 20px;">
+				<div id="section2">
         	<h2>Articles</h2>
 	        <div id="filters" class="button-group">
 	          <button class="btn btn-default is-checked" data-filter="all">All</button>
@@ -197,7 +197,7 @@
 
 				</div>
 
-				<div id="section3" style="padding: 20px;">
+				<div id="section3">
 					<h2> -30- Columns</h2>
 					<div class="modal-placeholder"></div>
 				</div>
@@ -220,7 +220,7 @@
 	{{#each .}}
 		<a data-toggle="modal" data-target="#{{fn this.gsx$name.$t}}" class="modal-link" href="#{{firstName}}" id="{{firstName}}">
 			<div class="wrap" style="width: 120px; height: 120px; display: inline-block; position: relative; overflow: hidden;">
-        <div style="background: url('{{gsx$mugs.$t}}'); width: 100%; height: 100%; background-size: cover;"></div>   
+        <div style="background: url('{{gsx$mugs.$t}}'); width: 100%; height: 100%; background-size: cover;"></div>
       </div>
 		</a>
 		<div class="modal fade" id="{{fn this.gsx$name.$t}}" data-pic="{{gsx$mugs.$t}}" data-name="{{fn this.gsx$name.$t}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">

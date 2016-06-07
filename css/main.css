@@ -15,6 +15,7 @@ body{
 #section2 > h2,
 #section3 > h2 {
   margin-top: 0 !important;
+  padding: 20px;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 700;
 }
@@ -195,6 +196,11 @@ body{
   line-height: 110%;
 }
 
+.editor-letter{
+  padding: 0px 20px;
+  font-size: 0.8em;
+}
+
 /*carousel styling*/
 .center {
   text-align: center;
@@ -313,6 +319,18 @@ footer {
   font-size: 18px;
 }
 
+#section1{
+  padding: 20px;
+}
+
+#section2{
+  padding: 20px;
+}
+
+#section3{
+  padding: 20px;
+}
+
 @media only screen and (max-width: 467px) {
   #weather-date {
     display: none;
@@ -323,27 +341,92 @@ footer {
     text-align: center;
   }
 
-  a#daily-bruin-link {
+  #daily-bruin-link {
     float: none;
+  }
+
+  #nav-bar{
+    font-size: 10px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   #daily-bruin-title{
-    font-size: 1.2em;
+    font-size: 25px;
     padding-left: 20px;
+
   }
 
   ul#nav-bar {
-    font-size: 0.9em;
+    font-size: 10px;
   }
 
   #top-bar-content {
-    padding-left: 30px; 
+    padding-left: 30px;
     padding-right: 30px;
   }
+
   #weather-date {
     padding: 0;
+  }
+
+  #content{
+    padding: 0px;
+  }
+
+  .editor-letter{
+    padding: 0;
+  }
+
+  #responsive{
+    padding-left: 10px;
+    font-size: 20px;
+    position: static;
+  }
+
+  footer{
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  #section1{
+    padding: 0px;
+  }
+
+  #section2{
+    padding: 0px;
+    text-align: center;
+  }
+
+  #section3{
+    padding: 0px;
+    text-align: center;
+  }
+
+  .image h3{
+    display: none;
+  }
+
+  .image h2{
+    display: none;
+  }
+
+  .og-details h3  {
+    font-size: 20px;
+    padding: 0px;
+  }
+
+  .og-expander p{
+    font-size: 8px;
+  }
+
+  #slider-wrapper{
+    height: 175px;
+  }
+
+  .image .sports-illo{
+    height: auto;
+    width: 100%;
   }
 }
 
